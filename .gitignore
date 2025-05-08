@@ -50,3 +50,14 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Others
+**.DS_Store
+Mongoose/out/*
+Mongoose/tmp/*
+Mongoose/.clangd
+Mongoose/.vscode/*
+Mongoose/*.yml
+Mongoose/*.json
+Mongoose/uv2csolution.log
+Mongoose/*.sct

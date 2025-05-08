@@ -1,8 +1,15 @@
 # Reference Applications
 
+CMSIS v6 has the concept of
+[software layers](https://open-cmsis-pack.github.io/cmsis-toolbox/build-overview/#software-layers). With these layers,
+it is easy to create [reference applications](https://open-cmsis-pack.github.io/cmsis-toolbox/ReferenceApplications/)
+that scale to many different targets (devices/boards) that offer the required layers.
+
 ## Objective
 
-Demonstrate how to create a reference application based on the MDK-Midleware Networ component for the NUCLEO-F756ZG development board.
+The NUCLEO-F756ZG development board supports layers and can thus used to create reference applications. In this
+workshop, a simple HTTP web server application using [MDK-Middleware](https://github.com/ARM-software/MDK-Middleware)
+is created using this approach.
 
 ## Prerequisites
 

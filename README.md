@@ -1,4 +1,4 @@
-# RDM 2025: FAE Track - Hands-On Sessions
+# RDM 2025: FAE Track
 
 All attendees will receive a [Nucleo-F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html) development
 board to follow some of the sessions.
