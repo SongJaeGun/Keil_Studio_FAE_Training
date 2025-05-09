@@ -1,9 +1,19 @@
-# RDM 2025: FAE Track
+![RDM Hero Image AI](./RDM_Hero_AI.png)
 
-All attendees will receive a [Nucleo-F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html) development
+# FAE Track
+
+This repository contains the workshop material for the FAE track on the second day of the RDM.
+
+## Prerequisites
+
+- VS Code installation with the following extensions:
+    - [Arm Keil Studio Pack](https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack)
+    - [Arm CMSIS Debugger Pack](https://marketplace.visualstudio.com/items?itemName=Arm.vscode-cmsis-debugger)
+- [GitHub](https://www.github.com) account
+- [Python 3.11.9](https://www.python.org/downloads/release/python-3119/) installed
+
+All attendees will receive a [NUCLEO-F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html) development
 board to follow some of the sessions.
-
-A [GitHub](https://www.github.com) account is required to follow some of the sessions.
 
 ## Agenda
 
@@ -15,14 +25,3 @@ A [GitHub](https://www.github.com) account is required to follow some of the ses
 | 10.30 | Break                                       |
 | 10.45 | [ML applications](./MLApp/README.md)        |
 | 12.00 | Lunch                                       |
-
-## Directory structure
-
-Each directory contains a README.md file with the instructions on how to run the workshop.
-
-| Directory               | Content                                             |
-|-------------------------|-----------------------------------------------------|
-| [Mongoose](./Mongoose/) | µVision project for the conversion demo             |
-| [RefApp](./RefApp)      | Instructions for creating the reference application |
-| [CI_CD](./CI_CD)        | Instructions for running CD/CD on GitHub            |
-| [MLApp](./MLApp)        | Instructions for creating the ML application        |

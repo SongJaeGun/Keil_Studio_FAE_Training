@@ -8,18 +8,11 @@ An in-depth [tutorial](https://mongoose.ws/documentation/#tutorials) as well as 
 
 ## Project Conversion
 
-The objective is to succefully convert, build, and debug a non-trivial project on modern hardware.
-
-### Prerequisites
-
-- VS Code installation with the following extensions:
-    - [Arm Keil Studio Pack](https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack)
-    - [Arm CMSIS Debugger Pack](https://marketplace.visualstudio.com/items?itemName=Arm.vscode-cmsis-debugger)
-- [STMicroelectronics NUCLEO-F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html) board
+The objective is to successfully convert, build, and debug a non-trivial project on modern hardware.
 
 ### Steps
 
-The following stpes only show the required minimum to get the project converted. The instructor will show much more
+The following steps only show the required minimum to get the project converted. The instructor will show much more
 around Keil Studio.
 
 #### Project conversion
@@ -82,13 +75,13 @@ around Keil Studio.
 ### Open a serial Terminal
 
 1. Go to **Device Manager** view.
-2. Open a serial console to the STLink.
+2. Open a serial console to the STLink.  
    ![Opening a serial console](./img/DeviceManagerView.png)
 3. In the pop up box, enter a baud rate of 115200.
 
 ### Start a debug session
 
-1. Go to **Debug Vieew**, select the "CMSIS Debugger: pyOCD".
+1. Go to **Debug View**, select the "CMSIS Debugger: pyOCD".
 2. Press "Play".  
    ![Starting a debug session](./img/DebugView.png)
 
