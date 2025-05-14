@@ -81,14 +81,14 @@ may demonstrate additional features of Keil Studio.
 ### Step 3: Open a Serial Terminal
 
 1. Go to the **Device Manager** view.
-2. Open a serial console connected to the ST-Link interface.
+2. Open a serial console connected to the ST-Link interface.  
    ![Opening a serial console](./img/DeviceManagerView.png)
 3. In the pop-up dialog, set the baud rate to **115200**.
 
 ### Step 4: Start the Debug Session
 
 1. Switch to the **Debug View** and select **CMSIS Debugger: pyOCD**.
-2. Click the **Play** icon to launch the debug session.
+2. Click the **Play** icon to launch the debug session.  
    ![Starting a debug session](./img/DebugView.png)
 
 ### Step 5: Interact with the Web Server
