@@ -53,11 +53,11 @@ dkms.conf
 
 # Others
 **.DS_Store
-Mongoose/out/*
-Mongoose/tmp/*
-Mongoose/.clangd
-Mongoose/.vscode/*
-Mongoose/*.yml
-Mongoose/*.json
-Mongoose/uv2csolution.log
-Mongoose/*.sct
+uv2csolution/out/*
+uv2csolution/tmp/*
+uv2csolution/.clangd
+uv2csolution/.vscode/*
+uv2csolution/*.yml
+uv2csolution/*.json
+uv2csolution/uv2csolution.log
+uv2csolution/*.sct

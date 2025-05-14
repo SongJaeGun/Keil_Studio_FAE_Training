@@ -1,1 +1,0 @@
-cmd='/opt/homebrew/bin/cmake;-G;Ninja;-S;<SOURCE_DIR>;-B;<BINARY_DIR>;-DSOLUTION_ROOT=/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution;-DCMSIS_PACK_ROOT=/Users/chrsei01/.cache/arm/packs;-DCMSIS_COMPILER_ROOT=/opt/cmsis-toolbox/etc'
