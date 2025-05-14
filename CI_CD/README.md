@@ -91,9 +91,12 @@ Ensure you have the following set up before starting:
 
 ## Optional Exercises
 
-- Set up a custom GitHub Actions workflow (e.g., for linting or building).
-- Explore GitHub Codespaces (if enabled on your account).
-- Enable branch protection and observe its effect on pull request workflows.
+- Set up a custom [GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart)
+  workflow (e.g., for linting or building).
+- Explore [GitHub Codespaces](https://github.com/features/codespaces) (if enabled on your account).
+- Enable
+  [branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
+  and observe its effect on pull request workflows.
 
 ## Summary
 
