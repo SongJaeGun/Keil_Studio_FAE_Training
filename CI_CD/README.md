@@ -2,8 +2,6 @@
 
 # Hands-On Lab: Using GitHub and Source Control Extensions in Visual Studio Code for CI/CD
 
-## Overview
-
 This hands-on session will guide participants through the practical use of Visual Studio Code (VS Code) extensions to
 enhance source control workflows using GitHub. Participants will:
 
@@ -91,6 +89,12 @@ Ensure you have the following set up before starting:
 1. Click on a workflow run to see job steps and logs.
 2. Use this to debug or monitor CI/CD behavior from within VS Code.
 
+## Optional Exercises
+
+- Set up a custom GitHub Actions workflow (e.g., for linting or building).
+- Explore GitHub Codespaces (if enabled on your account).
+- Enable branch protection and observe its effect on pull request workflows.
+
 ## Summary
 
 By the end of this lab, you should be able to:
@@ -98,14 +102,3 @@ By the end of this lab, you should be able to:
 - Use VS Code's source control for everyday Git tasks.
 - Collaborate efficiently using pull requests and inline reviews.
 - Monitor and debug GitHub Actions workflows directly from your editor.
-
-## Optional Exercises
-
-- Set up a custom GitHub Actions workflow (e.g., for linting or building).
-- Explore GitHub Codespaces (if enabled on your account).
-- Enable branch protection and observe its effect on pull request workflows.
-
-## Result
-
-Participants observe how CI/CD ensures reliable builds and encourages incremental development, even in
-hardware-constrained environments.
