@@ -25,11 +25,11 @@ Ensure you have the following set up before starting:
 
 ## Lab 1: Working with Git and Source Control in VS Code
 
-### Step 1: Clone a Repository
+### Step 1: Clone the Repository
 
 1. Open VS Code.
 2. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS) and type `Git: Clone`.
-3. Enter the URL of your GitHub repository.
+3. Enter the URL of your forked GitHub repository.
 4. Choose a local directory and open the folder when prompted.
 
 ### Step 2: Explore the Source Control Tab
