@@ -2,28 +2,30 @@
 
 # Reference Applications
 
-CMSIS v6 has the concept of
-[software layers](https://open-cmsis-pack.github.io/cmsis-toolbox/build-overview/#software-layers). With these layers,
-it is easy to create [reference applications](https://open-cmsis-pack.github.io/cmsis-toolbox/ReferenceApplications/)
-that scale to many different targets (devices/boards) that offer the required layers.
+CMSIS v6 introduces the concept of
+[software layers](https://open-cmsis-pack.github.io/cmsis-toolbox/build-overview/#software-layers), enabling developers
+to create flexible and portable
+[reference applications](https://open-cmsis-pack.github.io/cmsis-toolbox/ReferenceApplications/) that scale across
+various supported devices and boards.
 
 ## Objective
 
-The NUCLEO-F756ZG development board supports layers and can thus used to create reference applications. In this
-workshop, a simple HTTP web server application using [MDK-Middleware](https://github.com/ARM-software/MDK-Middleware)
-is created using this approach.
+This lab demonstrates how to use CMSIS layers to build a simple HTTP web server application on the NUCLEO-F756ZG
+development board. The application utilizes components from the
+[MDK-Middleware](https://github.com/ARM-software/MDK-Middleware) and serves as a practical reference implementation.
 
-## Steps
+## Procedure
 
 ### Create the project
 
 1. Open a new empty instance of VS Code.
 2. Go to **CMSIS View** and select “Create a New Solution”:  
    ![Create a New Solution](./img/CreateNewSolution.png)
-3. In the "Create Solution" dialog, use these settings:  
-   - Target Board: NUCLEO-F756ZG
-   - Reference Appliaction: Network
-   - Browse for a suitable base folder on your machine.  
+3. In the "Create Solution" dialog, configure as follows:
+   
+   - Target Board: NUCLEO-F756ZG  
+   - Reference Application: Network  
+   - Choose a suitable base directory.  
    ![Create a New Solution](./img/CreateNetworkApp.png)
 4. Click “Create”.
 5. In the following "Configure Solution" dialog just press OK.  
@@ -35,11 +37,12 @@ is created using this approach.
 2. Press the cog wheel to open the "Manage Solution" dialog.
 3. In the dialog, set the "HTTP_Server" as active project.  
    ![Context Set](./img/ContextSet.png)  
-4. Change the `Network.csolution.yml` and `HTTP_Server/HTTP_Server.cproject.yml` files according to
-   [documentation](https://github.com/Open-CMSIS-Pack/vscode-cmsis-debugger/blob/main/docs/setup.md):  
-   In the csolution, add before the `- projects` node:
+4. Modify the following project files as per
+   [setup documentation](https://github.com/Open-CMSIS-Pack/vscode-cmsis-debugger/blob/main/docs/setup.md):
 
-   ```json
+   In `Network.csolution.yml`, insert before the `- projects` section:
+
+   ```yml
    misc:
     - for-compiler: AC6
       C-CPP:
@@ -50,14 +53,14 @@ is created using this approach.
         - --entry=Reset_Handler
    ```
 
-   In the cproject, add at the end:
+   In `HTTP_Server/HTTP_Server.cproject.yml`, add at the end:
 
-   ```json
+   ```yml
    output:
-    type:
-    - elf
-    - hex
-    ```
+     type:
+      - elf
+      - hex
+   ```
 
 5. In the `HTTP_Server/RTE/Network/Net_Config_ETH_0.h` file, set the Ethernet MAC address to the one printed on your
    development board box.
@@ -69,9 +72,9 @@ is created using this approach.
    Save the file.
 2. Go to **CMSIS View – Manage Solution Settings** - **Run and Debug** and create a new debug configuration
    (“+ Add New”).
-3. Create a new debug configuration for “CMSIS Debugger: pyOCD”. A `launch.json` file will be create in `.vscode`.
-4. In the **Explorer View**, go to `out/HTTP_Server/STM32F756ZGTx/Debug` and right-click `HTTP_Server.hex`. Select
-   “Copy relative path”.
+3. Select **CMSIS Debugger: pyOCD**. This will create a `launch.json` file in the `.vscode` directory.
+4. In the **Explorer View**, go to `out/HTTP_Server/STM32F756ZGTx/Debug` and right-click `HTTP_Server.hex`.
+   Select “Copy relative path”.
 5. Add that path to the `load` command around line 15 in the `.vscode/launch.json` file:
 
    ```json
@@ -95,14 +98,15 @@ is created using this approach.
 
 You can use the web server by entering the IP address that is shown in the serial console in your web browser.
 
-Alternatively, to find the IP address, open the file `HTTP_Server.c` and:
+Alternatively, to find the IP address programmatically:
 
-- Find line 42: `    printf("IP4: %s\n",ip_ascii);` and set a breakpoint there.
-- Add `ip_ascii` to the Watch.
-- Run until the breakpoint and observe the IP address in the Watch window!
+- Open `HTTP_Server.c` and locate the line `printf("IP4: %s\n", ip_ascii);`.
+- Set a breakpoint at this line.
+- Add `ip_ascii` to the Watch window.
+- Run the application to the breakpoint and observe the IP address.
 
-## Result
+## Conclusion
 
-This session demonstrates how easy it is to set up a reference example project for a development board that is
-supported by CMSIS-Packs with CMSIS-Drivers and layers. OOBE is great and the project is up and running within
-minutes.
+This lab illustrates the ease of setting up a reference application on a CMSIS-supported development board. Leveraging
+CMSIS layers and MDK-Middleware components, developers can quickly prototype and validate embedded network
+applications with minimal effort.
