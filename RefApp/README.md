@@ -1,3 +1,5 @@
+![Reference Applications](./img/RefAppWorkflow.png)
+
 # Reference Applications
 
 CMSIS v6 has the concept of

@@ -1,19 +1,19 @@
 ![Modern DevOps Workflow](./img/modernDevOpsWorkflow.png)
 
-# CI/CD with GitHub Actions
+# Hands-On Lab: Using GitHub and Source Control Extensions in Visual Studio Code for CI/CD
 
-We have created a couple of repos that can be used as templates to set up a CI/CD DevOps workflow:
+## Overview
 
-1. https://github.com/ARM-software/AVH-MLOps
-2. https://github.com/Arm-Examples/AVH_CI_Template
-3. https://github.com/Arm-Examples/Hello_NUCLEO-F756ZG
+This hands-on session will guide participants through the practical use of Visual Studio Code (VS Code) extensions to
+enhance source control workflows using GitHub. Participants will:
 
-## Objective
-
-Demonstrate a CI workflow that builds and tests embedded firmware from the Hello_NUCLEO-F756ZG repository on every pull
-request. In parallel, it also build and *runs* the code for the Cortex-M7 AVH-FVP using GitHub Actions.
+- Use the built-in **Source Control** features of VS Code.
+- Collaborate using the **GitHub Pull Requests and Issues** extension.
+- Automate workflows using the **GitHub Actions** extension.
 
 ## Prerequisites
+
+Ensure you have the following set up before starting:
 
 - Fork [Hello_NUCLEO-F756ZG](https://github.com/Arm-Examples/Hello_NUCLEO-F756ZG) GitHub repository.
 - Go to "Actions" tab and enable workflows.
@@ -25,27 +25,85 @@ request. In parallel, it also build and *runs* the code for the Cortex-M7 AVH-FV
     - [Arm Keil Studio Pack](https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack)
 - STMicroelectronics NUCLEO-F756ZG board (optional for HIL).
 
-## Steps
+## Lab 1: Working with Git and Source Control in VS Code
 
-1. Clone the fork to your local machine and open it in VS Code:
-    - Understand structure (separation of cprojects for different targets)
-    - Use Git integration and branch view in VS Code.
-    - Review the workflow file (`.github/workflows/build.yml`)
-2. Commit a code change:
-    - Modify the `printf` message.
-    - Commit and push.
-    - See GitHub Actions triggering.
-    - Open "Actions" tab and check build logs.
-3. Create an issue:
-    - In the GitHub extension, go to "Issues" and add an issue (click the "+" sign):  
-      ![Create a new issue](./img/createIssue.png)
-    - Check how the issue is created in the repo.
-    - Update issues in VS Code and leave a comment on the issue.
-4. Fix or enhance code and push again:
-    - Understand iterative development with automated checks.
-5. Flash to device (optional):
-    - Use ST-LINK and CMSIS Debug to flash the built binary.
-    - Verify change on hardware (console output).
+### Step 1: Clone a Repository
+
+1. Open VS Code.
+2. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS) and type `Git: Clone`.
+3. Enter the URL of your GitHub repository.
+4. Choose a local directory and open the folder when prompted.
+
+### Step 2: Explore the Source Control Tab
+
+1. Click on the Source Control icon in the Activity Bar (or press `Ctrl+Shift+G`).
+2. Make changes to a file in the repository.
+3. Observe how VS Code detects changes and lists them as "Changes".
+4. Add a commit message in the input box at the top.
+5. Click the checkmark icon to commit.
+
+### Step 3: Push and Pull
+
+1. Use the ellipsis (...) menu for Git actions like push, pull, and sync.
+2. Push your changes to GitHub.
+3. If working in a team, pull changes made by others.
+
+## Lab 2: Collaborating with GitHub Pull Requests
+
+### Step 1: Open the GitHub Pull Requests Extension
+
+1. Click on the GitHub icon in the Activity Bar (added by the extension).
+2. Sign in to GitHub when prompted.
+
+### Step 2: Create a New Branch
+
+1. Press `Ctrl+Shift+P`, then `Git: Create Branch`.
+2. Name the branch, e.g., `feature/update-readme`.
+3. Make a change in your project, save, stage, and commit.
+
+### Step 3: Create a Pull Request
+
+1. After committing, click `+` on the GitHub sidebar to create a new pull request.
+2. Fill in the title and description.
+3. Submit the pull request to your repository’s default branch.
+
+### Step 4: Review and Merge
+
+1. View existing pull requests in the GitHub sidebar.
+2. Select one to review.
+3. Use built-in comments, reviews, and the merge button if you have permissions.
+
+## Lab 3: Monitoring Workflows with GitHub Actions
+
+### Step 1: Open the GitHub Actions Extension
+
+1. Click the GitHub Actions icon in the Activity Bar.
+2. If your repository already includes workflows, you’ll see them listed.
+3. If not, navigate to `.github/workflows/` and add a workflow YAML file.
+
+### Step 2: Trigger a Workflow
+
+1. Push a change that triggers a workflow (e.g., on `push` or `pull_request`).
+2. Observe the status of the workflow in the GitHub Actions tab.
+
+### Step 3: View Workflow Logs
+
+1. Click on a workflow run to see job steps and logs.
+2. Use this to debug or monitor CI/CD behavior from within VS Code.
+
+## Summary
+
+By the end of this lab, you should be able to:
+
+- Use VS Code's source control for everyday Git tasks.
+- Collaborate efficiently using pull requests and inline reviews.
+- Monitor and debug GitHub Actions workflows directly from your editor.
+
+## Optional Exercises
+
+- Set up a custom GitHub Actions workflow (e.g., for linting or building).
+- Explore GitHub Codespaces (if enabled on your account).
+- Enable branch protection and observe its effect on pull request workflows.
 
 ## Result
 
