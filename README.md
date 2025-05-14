@@ -17,11 +17,11 @@ board to follow some of the sessions.
 
 ## Agenda
 
-| Time  | Topic                                       |
-|-------|---------------------------------------------|
-| 9.00  | [Project conversion](./Mongoose/README.md)  |
-| 9.20  | [Reference application](./RefApp/README.md) |
-| 10.00 | [CI/CD with GitHub](./CI_CD/README.md)      |
-| 10.30 | Break                                       |
-| 10.45 | [ML applications](./MLApp/README.md)        |
-| 12.00 | Lunch                                       |
+| Time  | Topic                                          |
+|-------|------------------------------------------------|
+| 9.00  | [Project conversion](./uv2csolution/README.md) |
+| 9.20  | [Reference application](./RefApp/README.md)    |
+| 10.00 | [CI/CD with GitHub](./CI_CD/README.md)         |
+| 10.30 | Break                                          |
+| 10.45 | [ML applications](./MLApp/README.md)           |
+| 12.00 | Lunch                                          |

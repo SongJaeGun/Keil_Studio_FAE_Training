@@ -1,0 +1,9 @@
+CompileFlags:
+  CompilationDatabase: /Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/out/wizard/Target_1
+  Add:
+    - '-I/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/RTE/_Target_1'
+    - '-I/Users/chrsei01/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include'
+    - >-
+      -I/Users/chrsei01/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+    - '-I/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/.'
+    - '-I/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/mongoose'

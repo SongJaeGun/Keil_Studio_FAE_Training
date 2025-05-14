@@ -1,0 +1,37 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/CMakeFiles/wizard+Target_1-build"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/CMakeFiles/wizard+Target_1-build.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-build.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-configure.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-patch.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-update.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-download.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"wizard+Target_1"
+		],
+		"name" : "wizard+Target_1-build"
+	}
+}

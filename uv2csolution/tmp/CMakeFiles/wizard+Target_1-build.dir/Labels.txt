@@ -1,0 +1,11 @@
+# Target labels
+ wizard+Target_1
+# Source files and their labels
+/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/CMakeFiles/wizard+Target_1-build
+/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/CMakeFiles/wizard+Target_1-build.rule
+/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-build.rule
+/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-configure.rule
+/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-patch.rule
+/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-update.rule
+/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-download.rule
+/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-mkdir.rule

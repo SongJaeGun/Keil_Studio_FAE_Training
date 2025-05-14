@@ -1,0 +1,7 @@
+1 out of 1 target(s) converted
+Created solution: /Users/chrsei01/02_Git/MDK-Packs/RDM2025/Mongoose/wizard.csolution.yml
+With projects:
+- /Users/chrsei01/02_Git/MDK-Packs/RDM2025/Mongoose/wizard.cproject.yml
+Error: 0 error(s), 1 warning(s):
+Warnings:
+	Target name changed from 'Target 1' to 'Target_1'

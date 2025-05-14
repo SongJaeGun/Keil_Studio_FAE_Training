@@ -1,0 +1,13 @@
+# ninja log v6
+4	33	1747227860706268363	wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-mkdir	5ed20c093519865a
+4	33	1747227860706268363	/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-mkdir	5ed20c093519865a
+33	64	1747227860736570004	wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-download	15bc31e918000b18
+33	64	1747227860736570004	/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-download	15bc31e918000b18
+65	89	1747227860762336906	wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-update	151ce25bd2d2f38b
+65	89	1747227860762336906	/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-update	151ce25bd2d2f38b
+89	103	1747227860776563041	wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-patch	66cb860f6b500848
+89	103	1747227860776563041	/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-patch	66cb860f6b500848
+103	1765	1747227862438429033	wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-configure	dc737a5e9abcd7d
+103	1765	1747227862438429033	/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-configure	dc737a5e9abcd7d
+1765	1799	1747227862438935907	wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-database	5f875dc9760b1e09
+1765	1799	1747227862438935907	/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-database	5f875dc9760b1e09

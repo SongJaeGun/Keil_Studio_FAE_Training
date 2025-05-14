@@ -1,0 +1,218 @@
+build:
+  generated-by: csolution version 2.7.0
+  solution: wizard.csolution.yml
+  project: wizard.cproject.yml
+  context: wizard+Target_1
+  compiler: AC6
+  device: STM32F756ZGTx
+  device-pack: Keil::STM32F7xx_DFP@2.16.0
+  device-books:
+    - name: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Documentation/DM00124865.pdf
+      title: STM32F74xx/5xx Reference Manual
+    - name: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Documentation/DM00166114.pdf
+      title: STM32F756 Data Sheet
+    - name: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Documentation/DM00189702.pdf
+      title: STM32F7xx HAL Drivers
+    - name: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Documentation/DUI0646B_cortex_m7_dgug.pdf
+      title: Cortex-M7 Generic User Guide
+  processor:
+    endian: little
+    fpu: sp
+    core: Cortex-M7
+  packs:
+    - pack: ARM::CMSIS@6.1.0
+      path: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0
+    - pack: Keil::STM32F7xx_DFP@2.16.0
+      path: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0
+  optimize: debug
+  debug: on
+  misc:
+    ASM:
+      - -gdwarf-5
+      - -masm=auto
+    C:
+      - -gdwarf-5
+      - -std=gnu99
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+      - -Wno-covered-switch-default
+      - -Wno-unreachable-code-break
+    CPP:
+      - -gdwarf-5
+      - -xc++
+      - -std=c++11
+      - -fno-exceptions
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+      - -Wno-covered-switch-default
+      - -Wno-unreachable-code-break
+    Link:
+      - --entry=Reset_Handler
+      - --library_type=microlib
+      - --map
+      - --load_addr_map_info
+      - --xref
+      - --callgraph
+      - --symbols
+      - --info sizes
+      - --info totals
+      - --info unused
+      - --info veneers
+      - --strict
+      - --summary_stderr
+      - --info summarysizes
+  define:
+    - MG_HAL_DISABLE_SYSTEM_INIT
+    - __MICROLIB
+    - STM32F756xx
+    - _RTE_
+  define-asm:
+    - __MICROLIB
+    - STM32F756xx
+    - _RTE_
+  add-path:
+    - RTE/_Target_1
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+    - ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+  add-path-asm:
+    - RTE/_Target_1
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+    - ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+  output-dirs:
+    intdir: tmp
+    outdir: out/wizard/Target_1
+    rtedir: RTE
+  output:
+    - type: elf
+      file: wizard.axf
+    - type: hex
+      file: wizard.hex
+  components:
+    - component: ARM::CMSIS:CORE@6.1.0
+      condition: ARMv6_7_8-M Device
+      from-pack: ARM::CMSIS@6.1.0
+      selected-by: ARM::CMSIS:CORE
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+          category: include
+          version: 6.1.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Core/Include/tz_context.h
+          category: header
+          version: 6.1.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Core/Template/ARMv8-M/main_s.c
+          category: sourceC
+          attr: template
+          version: 1.1.1
+          select: Secure mode 'main' module for ARMv8-M
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Core/Template/ARMv8-M/tz_context.c
+          category: sourceC
+          attr: template
+          version: 1.1.1
+          select: RTOS Context Management (TrustZone for ARMv8-M)
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Documentation/html/Core/index.html
+          category: doc
+          version: 6.1.0
+    - component: Keil::Device:Startup@1.2.5
+      condition: STM32F7 CMSIS
+      from-pack: Keil::STM32F7xx_DFP@2.16.0
+      selected-by: Keil::Device:Startup
+      misc:
+        ASM:
+          - -masm=auto
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+          category: include
+          version: 1.2.5
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+          category: header
+          version: 1.2.5
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/MDK/Device/Source/ARM/STM32F74x_75x_OPT.s
+          category: source
+          attr: template
+          version: 1.2.5
+          select: Flash Option Bytes
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/MDK/Device/Source/ARM/STM32F74x_75x_OTP.s
+          category: source
+          attr: template
+          version: 1.2.5
+          select: Flash One-Time programmable Bytes
+        - file: RTE/Device/STM32F756ZGTx/startup_stm32f756xx.s
+          category: source
+          attr: config
+          version: 1.3.0
+        - file: RTE/Device/STM32F756ZGTx/system_stm32f7xx.c
+          category: source
+          attr: config
+          version: 1.3.0
+  linker:
+    script: wizard_Target_1.sct
+  groups:
+    - group: Application
+      files:
+        - file: main.c
+          category: sourceC
+        - file: hal.h
+          category: header
+        - file: hal.c
+          category: sourceC
+    - group: Mongoose
+      files:
+        - file: mongoose/mongoose_impl.c
+          category: sourceC
+        - file: mongoose/mongoose_glue.h
+          category: header
+        - file: mongoose/mongoose_fs.c
+          category: sourceC
+        - file: mongoose/mongoose_glue.c
+          category: sourceC
+        - file: mongoose/mongoose.c
+          category: sourceC
+        - file: mongoose/mongoose.h
+          category: header
+        - file: mongoose/mongoose_config.h
+          category: header
+  constructed-files:
+    - file: RTE/_Target_1/RTE_Components.h
+      category: header
+  licenses:
+    - license: <unknown>
+      license-agreement: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/LICENSE
+      packs:
+        - pack: Keil::STM32F7xx_DFP@2.16.0
+      components:
+        - component: Keil::Device:Startup@1.2.5
+    - license: Apache-2.0
+      packs:
+        - pack: ARM::CMSIS@6.1.0
+      components:
+        - component: ARM::CMSIS:CORE@6.1.0

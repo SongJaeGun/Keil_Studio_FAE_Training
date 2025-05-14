@@ -1,0 +1,52 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/CMakeFiles/wizard+Target_1"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/CMakeFiles/wizard+Target_1.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/CMakeFiles/wizard+Target_1-complete.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-build.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-configure.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-database.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-download.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-executes.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-install.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-mkdir.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-patch.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-test.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/tmp/wizard+Target_1/src/wizard+Target_1-stamp/wizard+Target_1-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"wizard+Target_1"
+		],
+		"name" : "wizard+Target_1"
+	}
+}
