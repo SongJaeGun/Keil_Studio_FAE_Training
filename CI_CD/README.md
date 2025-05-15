@@ -34,40 +34,39 @@ Ensure you have the following set up before starting:
 
 ### Step 2: Explore the Source Control Tab
 
-1. Click on the Source Control icon in the Activity Bar (or press `Ctrl+Shift+G`).
+1. Click on the Source Control icon ![Source Control Icon](./img/SourceControlIcon.png) in the Activity Bar (or press
+   `Ctrl+Shift+G`).
 2. Make changes to a file in the repository.
 3. Observe how VS Code detects changes and lists them as "Changes".
 4. Add a commit message in the input box at the top.
 5. Click the checkmark icon to commit.
+6. Accept the change to be staged and committed.
 
 ### Step 3: Push and Pull
 
-1. Use the ellipsis (...) menu for Git actions like push, pull, and sync.
-2. Push your changes to GitHub.
+1. The ellipsis (...) menu offers Git actions like push, pull, and sync.
+2. Use the **Sync Changes** button to push to your repo.
 3. If working in a team, pull changes made by others.
 
 ## Lab 2: Collaborating with GitHub Pull Requests
 
 ### Step 1: Open the GitHub Pull Requests Extension
 
-1. Click on the GitHub icon in the Activity Bar (added by the extension).
+1. Click on the GitHub icon ![GitHub Icon](./img/GHIcon.png) in the Activity Bar (added by the extension).
 2. Sign in to GitHub when prompted.
 
 ### Step 2: Create a New Branch
 
-1. Press `Ctrl+Shift+P`, then `Git: Create Branch`.
+1. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS), then `Git: Create Branch`.
 2. Name the branch, e.g., `feature/update-readme`.
 3. Make a change in your project, save, stage, and commit.
-
-### Step 3: Create a Pull Request
-
-1. After committing, click `+` on the GitHub sidebar to create a new pull request.
-2. Fill in the title and description.
-3. Submit the pull request to your repository’s default branch.
+4. You will be asked to create a pull request.
+5. Fill in the title and description.
+6. Submit the pull request to your repository’s default branch.
 
 ### Step 4: Review and Merge
 
-1. View existing pull requests in the GitHub sidebar.
+1. View existing pull requests using the GitHub Pull Requests icon ![GitHub Pull Requests icon](./img/GHPRIcon.png).
 2. Select one to review.
 3. Use built-in comments, reviews, and the merge button if you have permissions.
 
@@ -75,7 +74,7 @@ Ensure you have the following set up before starting:
 
 ### Step 1: Open the GitHub Actions Extension
 
-1. Click the GitHub Actions icon in the Activity Bar.
+1. Click the GitHub Actions icon ![GitHub Actions icon](./img/GHActionIcon.png) in the Activity Bar.
 2. If your repository already includes workflows, you’ll see them listed.
 3. If not, navigate to `.github/workflows/` and add a workflow YAML file.
 
