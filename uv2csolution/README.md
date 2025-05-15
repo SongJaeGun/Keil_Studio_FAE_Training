@@ -23,24 +23,24 @@ may demonstrate additional features of Keil Studio.
    - In `wizard.csolution.yml`, insert the following block before the `- projects` section:
   
      ```yml
-     misc:
-      - for-compiler: AC6
-        C-CPP:
-          - -gdwarf-5
-        ASM:
-          - -gdwarf-5
-        Link:
-          - --entry=Reset_Handler
+       misc:
+         - for-compiler: AC6
+           C-CPP:
+             - -gdwarf-5
+           ASM:
+             - -gdwarf-5
+           Link:
+             - --entry=Reset_Handler
      ```
 
    - In `wizard.cproject.yml`, append the following section:
 
      ```yml
-     output:
-       type:
-       - elf
-       - hex
-     ```
+       output:
+         type:
+         - elf
+         - hex
+    ```
 
 4. Build the project. You should encounter a single expected warning:
 
@@ -52,7 +52,7 @@ may demonstrate additional features of Keil Studio.
 
 1. Open the GUI view and add the Arm GNU Toolchain to `vcpkg_configuration.json` if not already present. Save the file.
 2. Navigate to **CMSIS View → Manage Solution Settings → Run and Debug**. Click **+ Add New** to create a new
-   configuration.
+   debug configuration.
 3. Select **CMSIS Debugger: pyOCD**. This will generate a `.vscode/launch.json` file.
 4. In the **Explorer View**, go to `out/wizard/Target_1`, right-click `wizard.hex`, and choose **Copy Relative Path**.
 5. In the `.vscode/launch.json` file, update the `load` command (around line 15) to include:
@@ -66,13 +66,13 @@ may demonstrate additional features of Keil Studio.
    - For all RAM entries, ensure:
 
      ```yml
-     access: rwx
+             access: rwx
      ```
 
    - For all ROM entries, ensure:
 
      ```yml
-     access: rx
+             access: rx
      ```
 
 > [!Note]
