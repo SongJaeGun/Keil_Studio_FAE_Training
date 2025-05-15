@@ -69,6 +69,7 @@ Ensure you have the following set up before starting:
 1. View existing pull requests using the GitHub Pull Requests icon ![GitHub Pull Requests icon](./img/GHPRIcon.png).
 2. Select one to review.
 3. Use built-in comments, reviews, and the merge button if you have permissions.
+4. It is good practice to delete the branch after it has been merged.
 
 ## Lab 3: Monitoring Workflows with GitHub Actions
 
@@ -81,7 +82,8 @@ Ensure you have the following set up before starting:
 ### Step 2: Trigger a Workflow
 
 1. Push a change that triggers a workflow (e.g., on `push` or `pull_request`).
-2. Observe the status of the workflow in the GitHub Actions tab.
+2. Observe the status of the workflow in the GitHub Actions tab:
+   ![Running Action](./img/RunningAction.png)
 
 ### Step 3: View Workflow Logs
 
