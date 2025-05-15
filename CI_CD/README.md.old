@@ -51,3 +51,4 @@ request. In parallel, it also build and *runs* the code for the Cortex-M7 AVH-FV
 
 Participants observe how CI/CD ensures reliable builds and encourages incremental development, even in
 hardware-constrained environments.
+ 
