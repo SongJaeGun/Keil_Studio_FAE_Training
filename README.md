@@ -9,6 +9,8 @@ This repository contains the workshop material for the FAE track on the second d
 - VS Code installation with the following extensions:
     - [Arm Keil Studio Pack](https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack)
     - [Arm CMSIS Debugger Pack](https://marketplace.visualstudio.com/items?itemName=Arm.vscode-cmsis-debugger)
+    - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+    - [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
 - [GitHub](https://www.github.com) account
 - [Python 3.11.9](https://www.python.org/downloads/release/python-3119/) installed
 
