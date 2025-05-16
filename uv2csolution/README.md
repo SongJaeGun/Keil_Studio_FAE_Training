@@ -48,8 +48,8 @@ may demonstrate additional features of Keil Studio.
        output:
          type:
          - elf
-         - hex
-    ```
+         -hex
+     ```
 
 4. Build the project. You should encounter a single expected warning:
 
