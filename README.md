@@ -7,7 +7,9 @@ This repository contains the workshop material for the FAE track on the second d
 ## Prerequisites
 
 - VS Code installation with the following extensions:
-    - [Arm Keil Studio Pack](https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack)
+    - [Arm Keil Studio Pack](https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack) (make sure that
+      the [Arm CMSIS Solution](https://marketplace.visualstudio.com/items?itemName=Arm.cmsis-csolution)extension has
+      the pre-release version 1.53.0).
     - [Arm CMSIS Debugger Pack](https://marketplace.visualstudio.com/items?itemName=Arm.vscode-cmsis-debugger)
     - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
     - [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
