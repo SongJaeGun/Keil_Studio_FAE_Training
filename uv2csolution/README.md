@@ -18,7 +18,8 @@ may demonstrate additional features of Keil Studio.
 
 1. Launch VS Code and open the folder containing the `wizard.uvprojx` file.
 2. Right-click the `wizard.uvprojx` file and choose **Convert µVision project to CMSIS solution**.
-3. Edit the generated `wizard.csolution.yml` and `wizard.cproject.yml` as follows:
+3. Open `vcpkg_configuration.json` and add the Arm GNU Toolchain using the GUI preview. Save the file.
+4. Edit the generated `wizard.csolution.yml` and `wizard.cproject.yml` as follows:
 
    - In `wizard.csolution.yml`, insert the following block in `- target-types\- type` section:
   
@@ -51,34 +52,26 @@ may demonstrate additional features of Keil Studio.
          - hex
      ```
 
-4. Build the project. You should encounter a single expected warning:
+5. Build the project. You should encounter a single expected warning:
 
    ```txt
    Warning: A1950W: The legacy armasm assembler is deprecated. Consider using the armclang integrated assembler instead.
    ```
 
-### Step 2: Configure Debugging
-
-1. Open the GUI view and add the Arm GNU Toolchain to `vcpkg_configuration.json` if not already present. Save the file.
-2. Navigate to **CMSIS View → Manage Solution Settings → Run and Debug**. Click the drop-down arrow to create a new
-   **Debug Configuration**.
-3. Select **STLink@pyOCD (launch)**. This will generate a `.vscode/launch.json` and a `.vscode/tasks.json` file:  
-   ![Add the ST-Link adapter using pyOCD](./img/AddST-LINKLaunchConfig.png)
-
-### Step 3: Open a Serial Terminal
+### Step 2: Open a Serial Terminal
 
 1. Go to the **Device Manager** view.
 2. Open a serial console connected to the ST-Link interface.  
    ![Opening a serial console](./img/DeviceManagerView.png)
 3. In the pop-up dialog, set the baud rate to **115200**.
 
-### Step 4: Start the Debug Session
+### Step 3: Start the Debug Session
 
 1. Switch to the **Debug View** and select **STLink@pyOCD (launch)**.
 2. Click the **Play** icon to launch the debug session.  
    ![Starting a debug session](./img/DebugView.png)
 
-### Step 5: Interact with the Web Server
+### Step 4: Interact with the Web Server
 
 Once the application is running, open a web browser and enter the IP address shown in the serial console to access the
 device-hosted web server.
@@ -86,4 +79,4 @@ device-hosted web server.
 ## Conclusion
 
 This lab demonstrates how to convert a complex µVision project to the CMSIS solution format, integrate debugging support,
-and interact with the deployed application—all using modern open-source tools.
+and interact with the deployed application.
