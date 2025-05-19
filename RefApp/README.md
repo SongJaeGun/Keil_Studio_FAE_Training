@@ -47,6 +47,8 @@ development board. The application utilizes components from the
           - set: 
             debugger:
               name: ST-LINK
+            images:
+              - project-context: HTTP_Server.Debug
    ```
 
    In `Network.csolution.yml`, insert before the `- projects` section:
