@@ -40,6 +40,15 @@ development board. The application utilizes components from the
 4. Modify the following project files as per
    [setup documentation](https://github.com/Open-CMSIS-Pack/vscode-cmsis-debugger/blob/main/docs/setup.md):
 
+   In `Network.csolution.yml`, insert the following block in `- target-types\- type` section:
+  
+   ```yml
+        target-set:
+          - set: 
+            debugger:
+              name: ST-LINK
+   ```
+
    In `Network.csolution.yml`, insert before the `- projects` section:
 
    ```yml
@@ -70,28 +79,22 @@ development board. The application utilizes components from the
 
 1. Using the GUI view, add the Arm GNU Toolchain to the `vcpkg_configuration.json` file as you need it for debugging.
    Save the file.
-2. Go to **CMSIS View – Manage Solution Settings** - **Run and Debug** and create a new debug configuration
-   (“+ Add New”).
-3. Select **CMSIS Debugger: pyOCD**. This will create a `launch.json` file in the `.vscode` directory.
-4. In the **Explorer View**, go to `out/HTTP_Server/STM32F756ZGTx/Debug` and right-click `HTTP_Server.hex`.
-   Select “Copy relative path”.
-5. Add that path to the `load` command around line 15 in the `.vscode/launch.json` file:
-
-   ```json
-                   "load out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.hex",
-   ```
+2. Navigate to **CMSIS View → Manage Solution Settings → Run and Debug**. Click the drop-down arrow to create a new
+   **Debug Configuration**.
+3. Select **STLink@pyOCD (launch)**. This will generate a `.vscode/launch.json` and a `.vscode/tasks.json` file:  
+   ![Add the ST-Link adapter using pyOCD](./img/AddST-LINKLaunchConfig.png)
 
 ### Open a serial Terminal
 
 1. Go to **Device Manager** view.
-2. Open a serial console to the STLink.  
+2. Open a serial console connected to the ST-Link interface.  
    ![Opening a serial console](./img/DeviceManagerView.png)
 3. In the pop up box, enter a baud rate of 115200.
 
 ### Start a debug session
 
-1. Go to **Debug View**, select the "CMSIS Debugger: pyOCD".
-2. Press "Play".  
+1. Switch to the **Debug View** and select **STLink@pyOCD (launch)**.
+2. Click the **Play** icon to launch the debug session.  
    ![Starting a debug session](./img/DebugView.png)
 
 ### Using the project
