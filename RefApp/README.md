@@ -52,23 +52,23 @@ development board. The application utilizes components from the
    In `Network.csolution.yml`, insert before the `- projects` section:
 
    ```yml
-   misc:
-    - for-compiler: AC6
-      C-CPP:
-        - -gdwarf-5
-      ASM:
-        - -gdwarf-5
-      Link:
-        - --entry=Reset_Handler
+     misc:
+      - for-compiler: AC6
+        C-CPP:
+          - -gdwarf-5
+        ASM:
+          - -gdwarf-5
+        Link:
+          - --entry=Reset_Handler
    ```
 
    In `HTTP_Server/HTTP_Server.cproject.yml`, add at the end:
 
    ```yml
-   output:
-     type:
-      - elf
-      - hex
+     output:
+       type:
+        - elf
+        - hex
    ```
 
 5. In the `HTTP_Server/RTE/Network/Net_Config_ETH_0.h` file, set the Ethernet MAC address to the one printed on your
