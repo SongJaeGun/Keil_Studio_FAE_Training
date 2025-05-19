@@ -30,6 +30,7 @@ development board. The application utilizes components from the
 4. Click “Create”.
 5. In the following "Configure Solution" dialog just press OK.  
    ![Configure Solution](./img/ConfigureSolution.png)
+7. Open `vcpkg_configuration.json` and add the Arm GNU Toolchain using the GUI preview. Save the file.
 
 ### Configure Project
 
@@ -76,15 +77,6 @@ development board. The application utilizes components from the
 5. In the `HTTP_Server/RTE/Network/Net_Config_ETH_0.h` file, set the Ethernet MAC address to the one printed on your
    development board box.
 6. Build the project. It should build without errors or warnings.
-
-### Debug configuration
-
-1. Using the GUI view, add the Arm GNU Toolchain to the `vcpkg_configuration.json` file as you need it for debugging.
-   Save the file.
-2. Navigate to **CMSIS View → Manage Solution Settings → Run and Debug**. Click the drop-down arrow to create a new
-   **Debug Configuration**.
-3. Select **STLink@pyOCD (launch)**. This will generate a `.vscode/launch.json` and a `.vscode/tasks.json` file:  
-   ![Add the ST-Link adapter using pyOCD](./img/AddST-LINKLaunchConfig.png)
 
 ### Open a serial Terminal
 
