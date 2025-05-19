@@ -19,6 +19,7 @@ may demonstrate additional features of Keil Studio.
 1. Launch VS Code and open the folder containing the `wizard.uvprojx` file.
 2. Right-click the `wizard.uvprojx` file and choose **Convert µVision project to CMSIS solution**.
 3. Open `vcpkg_configuration.json` and add the Arm GNU Toolchain using the GUI preview. Save the file.
+   ![Add the GCC toolchain to the vcpkg_configuraiton.json file](./img/AddGCCvcpkgConfig.png)  
 4. Edit the generated `wizard.csolution.yml` and `wizard.cproject.yml` as follows:
 
    - In `wizard.csolution.yml`, insert the following block in `- target-types\- type` section:

@@ -30,7 +30,8 @@ development board. The application utilizes components from the
 4. Click “Create”.
 5. In the following "Configure Solution" dialog just press OK.  
    ![Configure Solution](./img/ConfigureSolution.png)
-7. Open `vcpkg_configuration.json` and add the Arm GNU Toolchain using the GUI preview. Save the file.
+6. Open `vcpkg_configuration.json` and add the Arm GNU Toolchain using the GUI preview. Save the file.  
+   ![Add the GCC toolchain to the vcpkg_configuraiton.json file](./img/AddGCCvcpkgConfig.png)
 
 ### Configure Project
 
