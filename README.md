@@ -1,8 +1,8 @@
-![RDM Hero Image AI](./RDM_Hero_AI.png)
+![FAE Training Hero Image](./FAETraining.png)
 
-# FAE Track
+# FAE Training
 
-This repository contains the workshop material for the FAE track on the second day of the RDM.
+This repository contains workshop material for a self-study FAE training.
 
 ## Prerequisites
 
@@ -16,16 +16,15 @@ This repository contains the workshop material for the FAE track on the second d
 - [GitHub](https://www.github.com) account
 - [Python 3.11.9](https://www.python.org/downloads/release/python-3119/) installed
 
-All attendees will receive a [NUCLEO-F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html) development
-board to follow some of the sessions.
+All attendees should have a [NUCLEO-F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html) development
+board at hand to be able to follow some of the labs.
 
 ## Agenda
 
-| Time  | Topic                                          |
-|-------|------------------------------------------------|
-| 9.00  | [Project conversion](./uv2csolution/README.md) |
-| 9.20  | [Reference application](./RefApp/README.md)    |
-| 10.00 | [CI/CD with GitHub](./CI_CD/README.md)         |
-| 10.30 | Break                                          |
-| 10.45 | [ML applications](./MLApp/README.md)           |
-| 12.00 | Lunch                                          |
+Please follow this path to get the best training experience:
+
+- [Testing the tools and hardware setup](./Blinky/README.md)
+- [Project conversion](./uv2csolution/README.md)
+- [Reference application](./RefApp/README.md)
+- [CI/CD with GitHub](./CI_CD/README.md)
+- [ML applications](./MLApp/README.md)

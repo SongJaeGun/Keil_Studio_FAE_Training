@@ -1,5 +1,0 @@
-{
-    "clangd.arguments": [
-        "--compile-commands-dir=/Users/chrsei01/02_Git/MDK-Packs/RDM2025/uv2csolution/out/wizard/Target_1"
-    ]
-}

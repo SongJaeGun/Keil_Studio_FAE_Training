@@ -99,10 +99,16 @@ Ensure you have the following set up before starting:
   [branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
   and observe its effect on pull request workflows.
 
-## Summary
+## Conclusion
 
 By the end of this lab, you should be able to:
 
 - Use VS Code's source control for everyday Git tasks.
 - Collaborate efficiently using pull requests and inline reviews.
 - Monitor and debug GitHub Actions workflows directly from your editor.
+
+## Where to go next
+
+The final lab shows how to create an ML application with the TensorFlow Lite Micro framework. it's using
+[Jupyter notebooks](https://jupyter.org/) within VS Code to configure the ML model. Please check the
+[README](../MLApp/README.md)

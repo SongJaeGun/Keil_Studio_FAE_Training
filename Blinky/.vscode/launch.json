@@ -1,0 +1,65 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Arm Debugger",
+            "type": "arm-debugger",
+            "request": "launch",
+            "serialNumber": "${command:device-manager.getSerialNumber}",
+            "programs": "${command:cmsis-csolution.getBinaryFiles}",
+            "cmsisPack": "${command:cmsis-csolution.getTargetPack}",
+            "deviceName": "${command:cmsis-csolution.getDeviceName}",
+            "processorName": "${command:cmsis-csolution.getProcessorName}"
+        },
+        {
+            "name": "STLink@pyOCD (launch)",
+            "type": "gdbtarget",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/",
+            "program": "out/Blinky/NUCLEO-F756ZG/Debug/Blinky.axf",
+            "gdb": "arm-none-eabi-gdb",
+            "preLaunchTask": "CMSIS Load",
+            "initCommands": [
+                "monitor reset halt",
+                "tbreak main"
+            ],
+            "customResetCommands": [
+                "monitor reset halt"
+            ],
+            "target": {
+                "server": "pyocd",
+                "serverParameters": [
+                    "--probe",
+                    "stlink:",
+                    "--connect",
+                    "attach"
+                ],
+                "port": "3333"
+            },
+            "cmsis": {
+                "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
+                "updateConfiguration": "auto"
+            }
+        },
+        {
+            "name": "STLink@pyOCD (attach)",
+            "type": "gdbtarget",
+            "request": "attach",
+            "cwd": "${workspaceFolder}/",
+            "program": "out/Blinky/NUCLEO-F756ZG/Debug/Blinky.axf",
+            "gdb": "arm-none-eabi-gdb",
+            "initCommands": [
+                ""
+            ],
+            "customResetCommands": [
+                "monitor reset halt"
+            ],
+            "target": {
+                "port": "3333"
+            },
+            "cmsis": {
+                "updateConfiguration": "auto"
+            }
+        }
+    ]
+}

@@ -73,6 +73,7 @@ development board. The application utilizes components from the
        type:
         - elf
         - hex
+        - map
    ```
 
 5. In the `HTTP_Server/RTE/Network/Net_Config_ETH_0.h` file, set the Ethernet MAC address to the one printed on your
@@ -108,3 +109,10 @@ Alternatively, to find the IP address programmatically:
 This lab illustrates the ease of setting up a reference application on a CMSIS-supported development board. Leveraging
 CMSIS layers and MDK-Middleware components, developers can quickly prototype and validate embedded network
 applications with minimal effort.
+
+## Where to go next
+
+In the next lab, you'll learn how to use VS Code extensions for working directly with [GitHub](https://github.com) from
+within the IDE. it also explains how to run CI/CD tests on
+[Arm Virtual Hardware](https://github.com/Arm-Examples/AVH_CI_Template) using
+[GitHub Actions](https://github.com/features/actions). Please continue with the [README](../CI_CD/README.md).

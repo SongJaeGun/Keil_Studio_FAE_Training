@@ -61,3 +61,10 @@ uv2csolution/*.yml
 uv2csolution/*.json
 uv2csolution/uv2csolution.log
 uv2csolution/*.sct
+Blinky/out/*
+Blinky/tmp/*
+Blinky/.clangd
+Blinky/Blinky.cbuild-*.yml
+Blinky/Blinky.Debug+NUCLEO-F756ZG.cbuild.yml
+Blinky/Blinky+NUCLEO-F756ZG.cbuild-run.yml
+Blinky/NUCLEO-F756ZG.cbuild-run.yml

@@ -25,10 +25,10 @@ may demonstrate additional features of Keil Studio.
    - In `wizard.csolution.yml`, insert the following block in `- target-types\- type` section:
   
      ```yml
-          target-set:
-            - set: 
-              debugger:
-                name: ST-LINK
+           target-set:
+             - set: 
+               debugger:
+                 name: ST-LINK
      ```
 
    - In `wizard.csolution.yml`, insert the following block before the `- projects` section:
@@ -51,6 +51,7 @@ may demonstrate additional features of Keil Studio.
          type:
          - elf
          - hex
+         - map
      ```
 
 5. Build the project. You should encounter a single expected warning:
@@ -81,3 +82,10 @@ device-hosted web server.
 
 This lab demonstrates how to convert a complex µVision project to the CMSIS solution format, integrate debugging support,
 and interact with the deployed application.
+
+## Where to go next
+
+The next lab demonstrates how to create a
+[reference application](https://open-cmsis-pack.github.io/cmsis-toolbox/ReferenceApplications/) for a development board
+supporting [software layers](https://open-cmsis-pack.github.io/cmsis-toolbox/build-overview/#software-layers).
+Please continue with the [README](../RefApp/README.md).
