@@ -22,9 +22,11 @@ solution:
       board: STMicroelectronics::NUCLEO-F756ZG
       device: STMicroelectronics::STM32F756ZGTx
       target-set:
-        - set: 
+        - set:
           debugger:
             name: ST-LINK
+          images:
+            - project-context: Blinky.Debug
 
   # List of different build configurations.
   build-types:
