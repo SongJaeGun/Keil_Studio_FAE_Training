@@ -106,3 +106,7 @@ In the **CMSIS view**:
    - Serial connection to board.
    - Memory allocation errors.
    - Stack/heap configuration.
+
+## Where to go next
+
+This is the end of the FAE training. Thanks for your attention!
