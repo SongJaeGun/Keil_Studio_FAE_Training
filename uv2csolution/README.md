@@ -16,11 +16,14 @@ may demonstrate additional features of Keil Studio.
 
 ### Step 1: Convert the Project
 
-1. Launch VS Code and open the folder containing the `wizard.uvprojx` file.
-2. Right-click the `wizard.uvprojx` file and choose **Convert µVision project to CMSIS solution**.
-3. Open `vcpkg_configuration.json` and add the Arm GNU Toolchain using the GUI preview. Save the file.
-   ![Add the GCC toolchain to the vcpkg_configuraiton.json file](./img/AddGCCvcpkgConfig.png)  
-4. Edit the generated `wizard.csolution.yml` and `wizard.cproject.yml` as follows:
+1. Launch VS Code and open the ./uv2csolution/Mongoose folder containing the `wizard.uvprojx` file.
+2. Select the **Explorer** view.
+3. Right-click the `wizard.uvprojx` file and choose **Convert µVision project to CMSIS solution**.
+4. Open `vcpkg_configuration.json` and add the Arm GNU Toolchain using the GUI preview by entering
+       "arm:compilers/arm/arm-none-eabi-gcc": "14.2.1"  
+   ![Add the GCC toolchain to the vcpkg_configuraiton.json file](./img/AddGCCvcpkgConfig.png)
+5. Save the file (**CTRL+S**).
+6. Edit the generated `wizard.csolution.yml` and `wizard.cproject.yml` as follows:
 
    - In `wizard.csolution.yml`, insert the following block in `- target-types\- type` section:
   
@@ -43,6 +46,7 @@ may demonstrate additional features of Keil Studio.
            Link:
              - --entry=Reset_Handler
      ```
+     Save the file.
 
    - In `wizard.cproject.yml`, append the following section:
 
@@ -53,8 +57,9 @@ may demonstrate additional features of Keil Studio.
          - hex
          - map
      ```
-
-5. Build the project. You should encounter a single expected warning:
+     Save the file.
+     
+7. Build the project (**CMSIS-View** -> Hammer symbol). You should encounter a single expected warning:
 
    ```txt
    Warning: A1950W: The legacy armasm assembler is deprecated. Consider using the armclang integrated assembler instead.
@@ -69,7 +74,7 @@ may demonstrate additional features of Keil Studio.
 
 ### Step 3: Start the Debug Session
 
-1. Switch to the **Debug View** and select **STLink@pyOCD (launch)**.
+1. Switch to the **Run and Debug View** and select **STLink@pyOCD (launch)**.
 2. Click the **Play** icon to launch the debug session.  
    ![Starting a debug session](./img/DebugView.png)
 
