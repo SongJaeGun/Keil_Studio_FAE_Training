@@ -27,7 +27,7 @@ Launch VS Code and open this folder.
 
 ## Step 3: Start the Debug Session
 
-1. Switch to the **Debug View** and select **STLink@pyOCD (launch)**.
+1. Switch to **Run and Debug** and select **STLink@pyOCD (launch)**.
 2. Click the **Play** icon to launch the debug session.  
    ![Starting a debug session](./img/DebugView.png)
 
@@ -35,6 +35,8 @@ Launch VS Code and open this folder.
 
 - At start the vioLED0 blinks in 1 sec interval.
 - The vioBUTTON0 changes the blink frequency and start/stops vioLED1.
+
+  ![STM32F756ZG_B1-LEDs](https://github.com/user-attachments/assets/33bfe7b3-e4cb-4d66-85e7-a579bace7356)
 
 ### CMSIS-Driver Virtual I/O mapping
 
