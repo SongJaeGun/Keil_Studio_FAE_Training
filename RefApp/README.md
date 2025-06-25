@@ -89,7 +89,7 @@ development board. The application utilizes components from the
 
 ### Start a debug session
 
-1. Switch to the **Debug View** and select **STLink@pyOCD (launch)**.
+1. Switch to the **Run and Debug View** and select **STLink@pyOCD (launch)**.
 2. Click the **Play** icon to launch the debug session.  
    ![Starting a debug session](./img/DebugView.png)
 
@@ -103,6 +103,8 @@ Alternatively, to find the IP address programmatically:
 - Set a breakpoint at this line.
 - Add `ip_ascii` to the Watch window.
 - Run the application to the breakpoint and observe the IP address.
+  ![ip_ascii](https://github.com/user-attachments/assets/993e737b-7702-44f3-bfe8-a526075cd772)
+
 
 ## Conclusion
 
