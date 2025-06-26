@@ -13,15 +13,20 @@ enhance source control workflows using GitHub. Participants will:
 
 Ensure you have the following set up before starting:
 
+- Git, installed on your PC: https://git-scm.com/downloads
 - Fork [Hello_NUCLEO-F756ZG](https://github.com/Arm-Examples/Hello_NUCLEO-F756ZG) GitHub repository.
-- Go to "Actions" tab and enable workflows.
-- Go to "Settings" and enable **Issues**.
-- VS Code installed with the following extensions:
+- Go to "Actions" and enable **Workflows**.
+
+![EnableWorkflows](https://github.com/user-attachments/assets/a2df8514-555c-4fdd-9d63-993e303ad001)
+
+- Go to "Settings" and enable **Issues** at the "Features" section
+- VS Code must be installed with the following extensions:
     - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
     - [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
     - [Arm CMSIS Debugger](https://marketplace.visualstudio.com/items?itemName=Arm.vscode-cmsis-debugger)
     - [Arm Keil Studio Pack](https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack)
-- STMicroelectronics NUCLEO-F756ZG board (optional for HIL).
+- Connected is the STMicroelectronics NUCLEO-F756ZG board (optional for HIL).
+- If not yet happended, sign in with GitHub at the **Accounts** View
 
 ## Lab 1: Working with Git and Source Control in VS Code
 
