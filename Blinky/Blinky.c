@@ -44,8 +44,11 @@ static __NO_RETURN void thrLED (void *argument) {
       vioSetSignal(vioLED0, vioLEDoff);         // Switch LED0 off
       vioSetSignal(vioLED1, vioLEDon);          // Switch LED1 on
       osDelay(100U);                            // Delay 100 ms
-      vioSetSignal(vioLED0, vioLEDon);          // Switch LED0 on
       vioSetSignal(vioLED1, vioLEDoff);         // Switch LED1 off
+      vioSetSignal(vioLED2, vioLEDon);          // Switch LED2 on
+      osDelay(100U);                            // Delay 100 ms
+      vioSetSignal(vioLED2, vioLEDoff);         // Switch LED2 off
+      vioSetSignal(vioLED0, vioLEDon);          // Switch LED0 on
       osDelay(100U);                            // Delay 100 ms
     }
     else {
