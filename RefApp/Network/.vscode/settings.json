@@ -1,0 +1,6 @@
+{
+    "clangd.arguments": [
+        "--compile-commands-dir=e:\\sjg\\ARM\\FAE_Test\\all_file\\Keil_Studio_FAE_Training\\RefApp\\Network\\out\\HTTP_Server\\STM32F756ZGTx\\Debug"
+    ],
+    "debug.hideSlowPreLaunchWarning": true
+}

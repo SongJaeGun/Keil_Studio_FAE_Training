@@ -1,0 +1,428 @@
+build:
+  generated-by: csolution version 2.10.0
+  solution: ../Network.csolution.yml
+  project: BSD_Client.cproject.yml
+  context: BSD_Client.Debug+STM32F756ZGTx
+  compiler: AC6
+  board: STMicroelectronics::NUCLEO-F756ZG:Rev.B
+  board-pack: Keil::NUCLEO-F756ZG_BSP@2.0.0
+  board-books:
+    - name: https://www.st.com/en/evaluation-tools/nucleo-f756zg.html
+      title: NUCLEO-F756ZG Board
+      category: overview
+    - name: https://www.st.com/resource/en/data_brief/nucleo-f756zg.pdf
+      title: Data Brief
+      category: overview
+    - name: https://www.st.com/resource/en/user_manual/um1974-stm32-nucleo144-boards-mb1137-stmicroelectronics.pdf
+      title: User Manual
+      category: manual
+    - name: https://www.st.com/resource/en/schematic_pack/nucleo_144pins_sch.zip
+      title: Schematics
+      category: schematic
+    - name: ${CMSIS_PACK_ROOT}/Keil/NUCLEO-F756ZG_BSP/2.0.0/Documents/README.md
+      title: Guide
+      category: other
+  device: STMicroelectronics::STM32F756ZGTx
+  device-pack: Keil::STM32F7xx_DFP@3.1.0
+  device-books:
+    - name: https://www.st.com/resource/en/reference_manual/rm0385-stm32f75xxx-and-stm32f74xxx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf
+      title: STM32F74xx/5xx Reference Manual
+    - name: https://www.st.com/resource/en/datasheet/stm32f756bg.pdf
+      title: STM32F756 Data Sheet
+    - name: https://www.st.com/resource/en/user_manual/um1905-description-of-stm32f7-hal-and-lowlayer-drivers-stmicroelectronics.pdf
+      title: STM32F7xx HAL Drivers
+    - name: https://developer.arm.com/documentation/dui0646/latest
+      title: Cortex-M7 Generic User Guide
+  dbgconf:
+    - file: ../.cmsis/Network+STM32F756ZGTx.dbgconf
+      version: 2.0.0
+  processor:
+    endian: little
+    fpu: sp
+    core: Cortex-M7
+  packs:
+    - pack: ARM::CMSIS-RTX@5.9.0
+      path: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0
+    - pack: ARM::CMSIS@6.2.0
+      path: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.2.0
+    - pack: Keil::MDK-Middleware@8.0.0
+      path: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0
+    - pack: Keil::NUCLEO-F756ZG_BSP@2.0.0
+      path: ${CMSIS_PACK_ROOT}/Keil/NUCLEO-F756ZG_BSP/2.0.0
+    - pack: Keil::STM32F7xx_DFP@3.1.0
+      path: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/3.1.0
+  optimize: debug
+  debug: on
+  misc:
+    ASM:
+      - -masm=auto
+    C:
+      - -std=gnu11
+      - -Wno-macro-redefined
+      - -Wno-pragma-pack
+      - -Wno-parentheses-equality
+      - -Wno-license-management
+    CPP:
+      - -Wno-macro-redefined
+      - -Wno-pragma-pack
+      - -Wno-parentheses-equality
+      - -Wno-license-management
+    Link:
+      - --entry=Reset_Handler
+      - --map
+      - --info summarysizes
+      - --summary_stderr
+      - --diag_suppress=L6314W
+  define:
+    - STM32F756xx
+    - _RTE_
+  define-asm:
+    - STM32F756xx
+    - _RTE_
+  add-path:
+    - RTE/CMSIS
+    - RTE/Network
+    - RTE/_Debug_STM32F756ZGTx
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.2.0/CMSIS/RTOS2/Include
+    - ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Include
+  add-path-asm:
+    - RTE/CMSIS
+    - RTE/Network
+    - RTE/_Debug_STM32F756ZGTx
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.2.0/CMSIS/RTOS2/Include
+    - ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Include
+  output-dirs:
+    intdir: ../tmp
+    outdir: ../out/BSD_Client/STM32F756ZGTx/Debug
+    rtedir: RTE
+  output:
+    - type: elf
+      file: BSD_Client.axf
+  components:
+    - component: ARM::CMSIS:OS Tick:SysTick@1.0.5
+      condition: OS Tick SysTick
+      from-pack: ARM::CMSIS@6.2.0
+      selected-by: CMSIS:OS Tick:SysTick
+      implements: CMSIS:OS Tick@1.0.1
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.2.0/CMSIS/RTOS2/Source/os_systick.c
+          category: sourceC
+          version: 1.0.5
+    - component: ARM::CMSIS:RTOS2:Keil RTX5&Source@5.9.0
+      condition: RTX5
+      from-pack: ARM::CMSIS-RTX@5.9.0
+      selected-by: CMSIS:RTOS2:Keil RTX5&Source
+      implements: CMSIS:RTOS2@2.3.0
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Documentation/index.html
+          category: doc
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Include/rtx_os.h
+          category: header
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/RTX5.scvd
+          category: other
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/GCC/irq_armv7m.S
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_delay.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_evflags.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_evr.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_kernel.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_lib.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_memory.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_mempool.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_msgqueue.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_mutex.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_semaphore.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_system.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_thread.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_timer.c
+          category: source
+          version: 5.9.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Template/Events.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: RTX Events
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Template/MemPool.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: RTX Memory Pool
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Template/MsgQueue.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: RTX Message Queue
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Template/Mutex.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: RTX Mutex
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Template/Semaphore.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: RTX Semaphore
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Template/Thread.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: RTX Thread
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Template/Timer.c
+          category: source
+          attr: template
+          version: 2.0.1
+          select: RTX Timer
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Template/main.c
+          category: source
+          attr: template
+          version: 2.1.0
+          select: RTX 'main' function
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Template/svc_user.c
+          category: source
+          attr: template
+          version: 1.0.0
+          select: RTX SVC User Table
+        - file: RTE/CMSIS/RTX_Config.c
+          category: source
+          attr: config
+          version: 5.2.0
+        - file: RTE/CMSIS/RTX_Config.h
+          category: header
+          attr: config
+          version: 5.6.0
+    - component: Keil::Network&MDK:CORE@8.0.0
+      condition: CMSIS Core with RTOS
+      from-pack: Keil::MDK-Middleware@8.0.0
+      selected-by: Network&MDK:CORE
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Include/rl_net.h
+          category: header
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Network.scvd
+          category: other
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_addr.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_base64.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_common.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_config.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_debug.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_icmp.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_icmp6.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_ip4.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_ip4_frag.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_ip6.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_ip6_frag.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_loopback.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_md5.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_mem.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_ping_core.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_sys.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_version.c
+          category: source
+          version: 8.0.0
+        - file: RTE/Network/Net_Config.h
+          category: header
+          attr: config
+          version: 8.0.0
+        - file: RTE/Network/Net_Debug.h
+          category: header
+          attr: config
+          version: 8.0.0
+    - component: Keil::Network&MDK:Interface:ETH@8.0.0
+      condition: Network Driver ETH
+      from-pack: Keil::MDK-Middleware@8.0.0
+      selected-by: Network&MDK:Interface:ETH
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_eth.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Documentation/html/Network/group__netETH__Func.html
+          category: doc
+          version: 8.0.0
+        - file: RTE/Network/Net_Config_ETH_0.h
+          category: header
+          attr: config
+          version: 7.5.0
+    - component: Keil::Network&MDK:Socket:BSD@8.0.0
+      condition: Network UDP/TCP
+      from-pack: Keil::MDK-Middleware@8.0.0
+      selected-by: Network&MDK:Socket:BSD
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_bsd.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Documentation/html/Network/group__netBSD__Func.html
+          category: doc
+          version: 8.0.0
+        - file: RTE/Network/Net_Config_BSD.h
+          category: header
+          attr: config
+          version: 5.0.1
+    - component: Keil::Network&MDK:Socket:TCP@8.0.0
+      condition: Network Interface
+      from-pack: Keil::MDK-Middleware@8.0.0
+      selected-by: Network&MDK:Socket:TCP
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_tcp.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Template/TCP_Socket_Client.c
+          category: source
+          attr: template
+          version: 8.0.0
+          select: TCP Socket Client
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Template/TCP_Socket_Server.c
+          category: source
+          attr: template
+          version: 8.0.0
+          select: TCP Socket Server
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Documentation/html/Network/group__netTCP__Func.html
+          category: doc
+          version: 8.0.0
+        - file: RTE/Network/Net_Config_TCP.h
+          category: header
+          attr: config
+          version: 7.1.2
+    - component: Keil::Network&MDK:Socket:UDP@8.0.0
+      condition: Network Interface
+      from-pack: Keil::MDK-Middleware@8.0.0
+      selected-by: Network&MDK:Socket:UDP
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Source/net_udp.c
+          category: source
+          version: 8.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Components/Network/Template/UDP_Socket.c
+          category: source
+          attr: template
+          version: 8.0.0
+          select: UDP Socket
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/Documentation/html/Network/group__netUDP__Func.html
+          category: doc
+          version: 8.0.0
+        - file: RTE/Network/Net_Config_UDP.h
+          category: header
+          attr: config
+          version: 5.1.1
+  apis:
+    - api: CMSIS:OS Tick@1.0.1
+      from-pack: ARM::CMSIS@6.2.0
+      implemented-by: ARM::CMSIS:OS Tick:SysTick@1.0.5
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.2.0/CMSIS/RTOS2/Include/os_tick.h
+          category: header
+          version: 1.0.1
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.2.0/CMSIS/Documentation/html/RTOS2/group__CMSIS__RTOS__TickAPI.html
+          category: doc
+          version: 1.0.1
+    - api: CMSIS:RTOS2@2.3.0
+      from-pack: ARM::CMSIS@6.2.0
+      implemented-by: ARM::CMSIS:RTOS2:Keil RTX5&Source@5.9.0
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.2.0/CMSIS/Documentation/html/RTOS2/group__CMSIS__RTOS.html
+          category: doc
+          version: 2.3.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.2.0/CMSIS/RTOS2/Include/cmsis_os2.h
+          category: header
+          version: 2.3.0
+  linker:
+    script: RTE/Device/STM32F756ZGTx/ac6_linker_script.sct.src
+    regions: RTE/Device/STM32F756ZGTx/regions_NUCLEO-F756ZG.h
+  groups:
+    - group: Documentation
+      files:
+        - file: README.md
+          category: doc
+    - group: Network
+      files:
+        - file: BSD_Client.c
+          category: sourceC
+  constructed-files:
+    - file: RTE/_Debug_STM32F756ZGTx/RTE_Components.h
+      category: header
+  licenses:
+    - license: <proprietary> END USER LICENSE AGREEMENT FOR ARM SOFTWARE DEVELOPMENT TOOLS
+      license-agreement: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/8.0.0/license_terms/license_agreement.txt
+      packs:
+        - pack: Keil::MDK-Middleware@8.0.0
+      components:
+        - component: Keil::Network&MDK:CORE@8.0.0
+        - component: Keil::Network&MDK:Interface:ETH@8.0.0
+        - component: Keil::Network&MDK:Socket:BSD@8.0.0
+        - component: Keil::Network&MDK:Socket:TCP@8.0.0
+        - component: Keil::Network&MDK:Socket:UDP@8.0.0
+    - license: Apache-2.0
+      packs:
+        - pack: ARM::CMSIS-RTX@5.9.0
+        - pack: ARM::CMSIS@6.2.0
+        - pack: Keil::NUCLEO-F756ZG_BSP@2.0.0
+        - pack: Keil::STM32F7xx_DFP@3.1.0
+      components:
+        - component: ARM::CMSIS:OS Tick:SysTick@1.0.5
+        - component: ARM::CMSIS:RTOS2:Keil RTX5&Source@5.9.0
+        - component: CMSIS:OS Tick(API)
+        - component: CMSIS:RTOS2(API)
+    - license: BSD-3-Clause
+      packs:
+        - pack: Keil::STM32F7xx_DFP@3.1.0

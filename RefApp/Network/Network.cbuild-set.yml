@@ -1,0 +1,5 @@
+cbuild-set:
+  generated-by: vscode-cmsis-csolution version 1.56.0
+  environment: {}
+  contexts:
+    - context: HTTP_Server.Debug+STM32F756ZGTx

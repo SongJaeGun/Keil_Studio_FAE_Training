@@ -1,0 +1,54 @@
+build-idx:
+  generated-by: csolution version 2.10.0
+  description: IPv4/IPv6 Network examples
+  cdefault: cdefault.yml
+  csolution: Network.csolution.yml
+  tmpdir: tmp
+  cprojects:
+    - cproject: BSD_Client/BSD_Client.cproject.yml
+      clayers:
+        - clayer: BSD_Client/$Board-Layer$
+    - cproject: BSD_Server/BSD_Server.cproject.yml
+      clayers:
+        - clayer: BSD_Server/$Board-Layer$
+    - cproject: FTP_Server/FTP_Server.cproject.yml
+      clayers:
+        - clayer: FTP_Server/$Board-Layer$
+    - cproject: HTTP_Server/HTTP_Server.cproject.yml
+      clayers:
+        - clayer: HTTP_Server/$Board-Layer$
+    - cproject: HTTP_Upload/HTTP_Upload.cproject.yml
+      clayers:
+        - clayer: HTTP_Upload/$Board-Layer$
+    - cproject: HTTPS_Server/HTTPS_Server.cproject.yml
+      clayers:
+        - clayer: HTTPS_Server/$Board-Layer$
+    - cproject: SMTP_Client/SMTP_Client.cproject.yml
+      clayers:
+        - clayer: SMTP_Client/$Board-Layer$
+    - cproject: SMTPS_Client/SMTPS_Client.cproject.yml
+      clayers:
+        - clayer: SMTPS_Client/$Board-Layer$
+    - cproject: SNMP_Agent/SNMP_Agent.cproject.yml
+      clayers:
+        - clayer: SNMP_Agent/$Board-Layer$
+    - cproject: Telnet_Server/Telnet_Server.cproject.yml
+      clayers:
+        - clayer: Telnet_Server/$Board-Layer$
+  cbuilds:
+    - cbuild: HTTP_Server/HTTP_Server.Debug+STM32F756ZGTx.cbuild.yml
+      project: HTTP_Server
+      configuration: .Debug+STM32F756ZGTx
+      clayers:
+        - clayer: Board/NUCLEO-F756ZG/Board.clayer.yml
+      errors: true
+      messages:
+        errors:
+          - "required pack: ARM::CMSIS-Compiler@2.0.0 not installed, version fixed in *.cbuild-pack.yml file"
+          - board 'NUCLEO-F756ZG:Rev.B' was not found
+          - processing context 'HTTP_Server.Debug+STM32F756ZGTx' failed
+        info:
+          - Network.cbuild-pack.yml - file is already up-to-date
+          - HTTP_Server.Debug+STM32F756ZGTx.cbuild.yml - file is already up-to-date
+      packs-missing:
+        - pack: ARM::CMSIS-Compiler@2.0.0

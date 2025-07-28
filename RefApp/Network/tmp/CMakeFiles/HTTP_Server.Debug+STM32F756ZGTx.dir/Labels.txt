@@ -1,0 +1,16 @@
+# Target labels
+ HTTP_Server.Debug+STM32F756ZGTx
+# Source files and their labels
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/CMakeFiles/HTTP_Server.Debug+STM32F756ZGTx
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/CMakeFiles/HTTP_Server.Debug+STM32F756ZGTx.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/CMakeFiles/HTTP_Server.Debug+STM32F756ZGTx-complete.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-build.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-configure.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-database.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-download.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-executes.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-install.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-mkdir.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-patch.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-test.rule
+E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-update.rule

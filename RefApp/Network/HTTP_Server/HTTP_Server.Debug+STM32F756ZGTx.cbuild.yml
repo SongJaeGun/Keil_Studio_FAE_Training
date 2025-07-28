@@ -1,0 +1,37 @@
+build:
+  generated-by: csolution version 2.10.0
+  solution: ../Network.csolution.yml
+  project: HTTP_Server.cproject.yml
+  context: HTTP_Server.Debug+STM32F756ZGTx
+  compiler: AC6
+  optimize: debug
+  debug: on
+  misc:
+    ASM:
+      - -masm=auto
+    C:
+      - -std=gnu11
+      - -Wno-macro-redefined
+      - -Wno-pragma-pack
+      - -Wno-parentheses-equality
+      - -Wno-license-management
+    CPP:
+      - -Wno-macro-redefined
+      - -Wno-pragma-pack
+      - -Wno-parentheses-equality
+      - -Wno-license-management
+    Link:
+      - --entry=Reset_Handler
+      - --map
+      - --info summarysizes
+      - --summary_stderr
+      - --diag_suppress=L6314W
+  define:
+    - CMSIS_target_header: \"NUCLEO-F756ZG.h\"
+  output-dirs:
+    intdir: ../tmp
+    outdir: ../out/HTTP_Server/STM32F756ZGTx/Debug
+    rtedir: RTE
+  output:
+    - type: elf
+      file: HTTP_Server.axf

@@ -1,0 +1,37 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/CMakeFiles/HTTP_Server.Debug+STM32F756ZGTx-database"
+		},
+		{
+			"file" : "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/CMakeFiles/HTTP_Server.Debug+STM32F756ZGTx-database.rule"
+		},
+		{
+			"file" : "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-database.rule"
+		},
+		{
+			"file" : "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-configure.rule"
+		},
+		{
+			"file" : "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-patch.rule"
+		},
+		{
+			"file" : "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-update.rule"
+		},
+		{
+			"file" : "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-download.rule"
+		},
+		{
+			"file" : "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/tmp/HTTP_Server.Debug+STM32F756ZGTx/src/HTTP_Server.Debug+STM32F756ZGTx-stamp/HTTP_Server.Debug+STM32F756ZGTx-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"HTTP_Server.Debug+STM32F756ZGTx"
+		],
+		"name" : "HTTP_Server.Debug+STM32F756ZGTx-database"
+	}
+}

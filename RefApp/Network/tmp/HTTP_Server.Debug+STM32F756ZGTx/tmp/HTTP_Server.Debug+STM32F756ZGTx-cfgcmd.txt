@@ -1,0 +1,1 @@
+cmd='D:/SPB_DATA/.vcpkg/artifacts/2139c4c6/tools.kitware.cmake/3.31.5/bin/cmake.exe;-G;Ninja;-S;<SOURCE_DIR>;-B;<BINARY_DIR>;-DSOLUTION_ROOT=E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network;-DCMSIS_PACK_ROOT=C:/Users/user/AppData/Local/Arm/Packs;-DCMSIS_COMPILER_ROOT=D:/SPB_DATA/.vcpkg/artifacts/2139c4c6/tools.open.cmsis.pack.cmsis.toolbox/2.10.0/etc'

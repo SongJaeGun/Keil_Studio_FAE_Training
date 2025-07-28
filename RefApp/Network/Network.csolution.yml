@@ -1,0 +1,48 @@
+solution:
+  description: IPv4/IPv6 Network examples
+  created-for: CMSIS-Toolbox@2.6.0
+  cdefault:
+
+  select-compiler:
+    # list of tested compilers that can be selected
+    - compiler: AC6
+    - compiler: GCC
+    - compiler: IAR
+    - compiler: CLANG
+
+  target-types:
+    - type: STM32F756ZGTx
+      device: STM32F756ZGTx
+      board: NUCLEO-F756ZG:Rev.B
+      variables:
+        - Board-Layer: $SolutionDir()$/Board/NUCLEO-F756ZG/Board.clayer.yml
+          copied-from: ${CMSIS_PACK_ROOT}/Keil/NUCLEO-F756ZG_BSP/2.0.0/Layers/Default/Board.clayer.yml
+    # - type: <target_name>
+    #   board: <board_name>
+    #   variables:
+    #     - Board-Layer: <board_layer>.clayer.yml
+
+  build-types:
+    - type: Debug
+      debug: on
+      optimize: debug
+    - type: Release
+      debug: off
+      optimize: balanced
+
+  projects:
+    - project: BSD_Client/BSD_Client.cproject.yml
+    - project: BSD_Server/BSD_Server.cproject.yml
+    - project: FTP_Server/FTP_Server.cproject.yml
+    - project: HTTP_Server/HTTP_Server.cproject.yml
+    - project: HTTP_Upload/HTTP_Upload.cproject.yml
+    - project: HTTPS_Server/HTTPS_Server.cproject.yml
+    - project: SMTP_Client/SMTP_Client.cproject.yml
+    - project: SMTPS_Client/SMTPS_Client.cproject.yml
+    - project: SNMP_Agent/SNMP_Agent.cproject.yml
+    - project: Telnet_Server/Telnet_Server.cproject.yml
+  packs:
+    - pack: Keil::NUCLEO-F756ZG_BSP
+    - pack: Keil::STM32F7xx_DFP
+    - pack: ARM::CMSIS
+  compiler: AC6
