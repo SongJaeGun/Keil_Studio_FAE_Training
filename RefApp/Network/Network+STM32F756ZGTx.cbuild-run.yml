@@ -1,7 +1,8 @@
 cbuild-run:
-  generated-by: csolution version 2.10.0
+  generated-by: csolution version 2.9.0
   solution: Network.csolution.yml
   target-type: STM32F756ZGTx
+  target-set: <default>
   compiler: AC6
   board: STMicroelectronics::NUCLEO-F756ZG:Rev.B
   board-pack: Keil::NUCLEO-F756ZG_BSP@2.0.0
@@ -11,7 +12,11 @@ cbuild-run:
     - file: out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.axf
       info: generate by HTTP_Server.Debug+STM32F756ZGTx
       type: elf
-      load: image+symbols
+      load: symbols
+    - file: out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.hex
+      info: generate by HTTP_Server.Debug+STM32F756ZGTx
+      type: hex
+      load: image
   system-resources:
     memory:
       - name: Flash

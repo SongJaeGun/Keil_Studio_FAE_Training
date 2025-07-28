@@ -7,6 +7,8 @@ set(CONTEXT HTTP_Server.Debug+STM32F756ZGTx)
 set(TARGET ${CONTEXT})
 set(OUT_DIR "${SOLUTION_ROOT}/out/HTTP_Server/STM32F756ZGTx/Debug")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(HEX_FILE "HTTP_Server.hex")
+set(LD_MAP_FILE "HTTP_Server.axf.map")
 set(LD_SCRIPT "${SOLUTION_ROOT}/Board/NUCLEO-F756ZG/RTE/Device/STM32F756ZGTx/ac6_linker_script.sct.src")
 set(LD_REGIONS "${SOLUTION_ROOT}/Board/NUCLEO-F756ZG/RTE/Device/STM32F756ZGTx/regions_NUCLEO-F756ZG.h")
 set(LD_SCRIPT_PP "${CMAKE_CURRENT_BINARY_DIR}/ac6_linker_script.sct")
@@ -47,7 +49,7 @@ target_include_directories(${CONTEXT} PUBLIC
   "${SOLUTION_ROOT}/HTTP_Server/RTE/_Debug_STM32F756ZGTx"
   "${SOLUTION_ROOT}/HTTP_Server/RTE/CMSIS"
   "${SOLUTION_ROOT}/HTTP_Server/RTE/Network"
-  "${CMSIS_PACK_ROOT}/ARM/CMSIS-Compiler/2.1.0/include"
+  "${CMSIS_PACK_ROOT}/ARM/CMSIS-Compiler/2.0.0/include"
   "${CMSIS_PACK_ROOT}/ARM/CMSIS-Driver_STM32/1.2.0/Drivers"
   "${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Include"
   "${CMSIS_PACK_ROOT}/ARM/CMSIS/6.2.0/CMSIS/Core/Include"
@@ -75,12 +77,14 @@ target_compile_options(${CONTEXT} PUBLIC
     "SHELL:${ASM_CPU}"
     "SHELL:${ASM_FLAGS}"
     "SHELL:${ASM_BYTE_ORDER}"
+    "SHELL:-gdwarf-5"
     "SHELL:-masm=auto"
   >
   $<$<COMPILE_LANGUAGE:C>:
     "SHELL:${CC_CPU}"
     "SHELL:${CC_FLAGS}"
     "SHELL:${CC_BYTE_ORDER}"
+    "SHELL:-gdwarf-5"
     "SHELL:-std=gnu11"
     "SHELL:-Wno-macro-redefined"
     "SHELL:-Wno-pragma-pack"
@@ -111,7 +115,7 @@ target_link_libraries(${CONTEXT} PUBLIC
   Group_Board
   Group_CubeMX
   Group_STM32_HAL_Driver
-  ARM_CMSIS-Compiler_CORE_1_1_0
+  ARM_CMSIS-Compiler_CORE_1_1_1
   ARM_CMSIS-Compiler_STDERR_Custom_1_1_0
   ARM_CMSIS-Compiler_STDIN_Custom_1_1_0
   ARM_CMSIS-Compiler_STDOUT_Custom_1_1_0
@@ -137,6 +141,7 @@ target_link_libraries(${CONTEXT} PUBLIC
 target_link_options(${CONTEXT} PUBLIC
   "SHELL:${LD_CPU}"
   "SHELL:${_LS}\"${LD_SCRIPT_PP}\""
+  "SHELL:${LD_MAP}"
   "SHELL:--entry=Reset_Handler"
   "SHELL:--map"
   "SHELL:--info summarysizes"
@@ -147,3 +152,6 @@ set_target_properties(${CONTEXT} PROPERTIES LINK_DEPENDS ${LD_SCRIPT})
 
 # Linker script pre-processing
 add_custom_command(TARGET ${CONTEXT} PRE_LINK COMMAND ${CPP} ARGS ${CPP_ARGS_LD_SCRIPT} BYPRODUCTS ${LD_SCRIPT_PP})
+
+# Hex Conversion
+ add_custom_command(TARGET ${CONTEXT} POST_BUILD COMMAND ${CMAKE_OBJCOPY} ${ELF2HEX})

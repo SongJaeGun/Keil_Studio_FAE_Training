@@ -19,6 +19,8 @@ set(DIRS
 
 set(OUTPUTS_1
   "${SOLUTION_ROOT}/out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.axf"
+  "${SOLUTION_ROOT}/out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.hex"
+  "${SOLUTION_ROOT}/out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.axf.map"
 )
 
 set(ARGS

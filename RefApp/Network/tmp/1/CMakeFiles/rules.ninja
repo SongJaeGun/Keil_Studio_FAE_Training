@@ -75,7 +75,7 @@ rule C_COMPILER__Group_STM32_HAL_Driver_unscanned_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__ARM_CMSIS-Compiler_CORE_1_1_0_unscanned_
+rule C_COMPILER__ARM_CMSIS-Compiler_CORE_1_1_1_unscanned_
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}d:\SPB_DATA\.vcpkg\artifacts\2139c4c6\compilers.arm.armclang\6.24.0\bin\armclang.exe --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in

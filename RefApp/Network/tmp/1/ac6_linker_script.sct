@@ -1,0 +1,34 @@
+# 1 "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/Board/NUCLEO-F756ZG/RTE/Device/STM32F756ZGTx/ac6_linker_script.sct.src"
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 412 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/Board/NUCLEO-F756ZG/RTE/Device/STM32F756ZGTx/regions_NUCLEO-F756ZG.h" 1
+# 2 "<built-in>" 2
+# 1 "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/Board/NUCLEO-F756ZG/RTE/Device/STM32F756ZGTx/ac6_linker_script.sct.src" 2
+# 36 "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/Board/NUCLEO-F756ZG/RTE/Device/STM32F756ZGTx/ac6_linker_script.sct.src"
+LR_ROM0 0x08000000 0x00100000 {
+
+  ER_ROM0 0x08000000 0x00100000 {
+    *.o (RESET, +First)
+    *(InRoot$$Sections)
+    *(+RO +XO)
+  }
+
+
+
+
+
+
+
+  RW_NOINIT 0x20010000 UNINIT (0x00040000 - 0 - 0 - 0) {
+    *.o(.bss.noinit)
+    *.o(.bss.noinit.*)
+  }
+
+  RW_RAM0 AlignExpr(+0, 8) (0x00040000 - 0 - 0 - 0 - AlignExpr(ImageLength(RW_NOINIT), 8)) {
+    *(+RW +ZI)
+  }
+# 91 "E:/sjg/ARM/FAE_Test/all_file/Keil_Studio_FAE_Training/RefApp/Network/Board/NUCLEO-F756ZG/RTE/Device/STM32F756ZGTx/ac6_linker_script.sct.src"
+}

@@ -29,6 +29,7 @@
 //   <i>LSB of first byte must be 0 (an ethernet Multicast bit).
 //   <i>Default: "1E-30-6C-A2-45-5E"
 #define ETH0_MAC_ADDR           "1E-30-6C-A2-45-5E"
+//#define ETH0_MAC_ADDR           "AU-2Z-4A-37-00-1K"
 
 //   <e>VLAN
 //   <i>Enable or disable Virtual LAN

@@ -17,6 +17,12 @@ solution:
       variables:
         - Board-Layer: $SolutionDir()$/Board/NUCLEO-F756ZG/Board.clayer.yml
           copied-from: ${CMSIS_PACK_ROOT}/Keil/NUCLEO-F756ZG_BSP/2.0.0/Layers/Default/Board.clayer.yml
+      target-set:
+        - set: 
+          debugger:
+            name: ST-LINK
+          images:
+            - project-context: HTTP_Server.Debug    
     # - type: <target_name>
     #   board: <board_name>
     #   variables:
@@ -29,6 +35,15 @@ solution:
     - type: Release
       debug: off
       optimize: balanced
+  
+  misc:
+    - for-compiler: AC6
+      C-CPP:
+        - -gdwarf-5
+      ASM:
+        - -gdwarf-5
+      Link:
+        - --entry=Reset_Handler
 
   projects:
     - project: BSD_Client/BSD_Client.cproject.yml
@@ -41,6 +56,7 @@ solution:
     - project: SMTPS_Client/SMTPS_Client.cproject.yml
     - project: SNMP_Agent/SNMP_Agent.cproject.yml
     - project: Telnet_Server/Telnet_Server.cproject.yml
+
   packs:
     - pack: Keil::NUCLEO-F756ZG_BSP
     - pack: Keil::STM32F7xx_DFP

@@ -1,5 +1,5 @@
 build-idx:
-  generated-by: csolution version 2.10.0
+  generated-by: csolution version 2.9.0
   description: IPv4/IPv6 Network examples
   cdefault: cdefault.yml
   csolution: Network.csolution.yml
@@ -41,14 +41,20 @@ build-idx:
       configuration: .Debug+STM32F756ZGTx
       clayers:
         - clayer: Board/NUCLEO-F756ZG/Board.clayer.yml
-      errors: true
+        - clayer: Board/NUCLEO-F756ZG/CubeMX/Board.cgen.yml
+      depends-on:
+        - HTTP_Server.Debug+STM32F756ZGTx-Run_FCARM
       messages:
-        errors:
-          - "required pack: ARM::CMSIS-Compiler@2.0.0 not installed, version fixed in *.cbuild-pack.yml file"
-          - board 'NUCLEO-F756ZG:Rev.B' was not found
-          - processing context 'HTTP_Server.Debug+STM32F756ZGTx' failed
         info:
           - Network.cbuild-pack.yml - file is already up-to-date
+          - Network+STM32F756ZGTx.cbuild-run.yml - file generated successfully
           - HTTP_Server.Debug+STM32F756ZGTx.cbuild.yml - file is already up-to-date
-      packs-missing:
-        - pack: ARM::CMSIS-Compiler@2.0.0
+  executes:
+    - execute: HTTP_Server.Debug+STM32F756ZGTx-Run_FCARM
+      run: ${CMAKE_COMMAND} -G Ninja -S ${INPUT_0} -B ${CMAKE_BINARY_DIR}/FCARM/HTTP_Server.Debug+STM32F756ZGTx -DINPUT_DIRECTORY=${INPUT_1} -DOUTPUT=${OUTPUT} && ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR}/FCARM/HTTP_Server.Debug+STM32F756ZGTx -- --quiet
+      always: 
+      input:
+        - HTTP_Server/FCARM
+        - HTTP_Server/Web
+      output:
+        - HTTP_Server/Web.c

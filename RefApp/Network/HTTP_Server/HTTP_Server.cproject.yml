@@ -47,4 +47,8 @@ project:
         - Web     # Input directory with "web files" for FCARM
       output:
         - Web.c   # Output file for FCARM
-
+  output:
+    type:
+     - elf
+     - hex
+     - map      
