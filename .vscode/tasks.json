@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-                "cwd": "${workspaceFolder}/uv2csolution"
+                "cwd": "${workspaceFolder}/RefApp\\Network"
             },
             "windows": {
                 "options": {
@@ -54,7 +54,7 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-                "cwd": "${workspaceFolder}/uv2csolution"
+                "cwd": "${workspaceFolder}/RefApp\\Network"
             },
             "windows": {
                 "options": {
@@ -101,7 +101,7 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-                "cwd": "${workspaceFolder}/uv2csolution"
+                "cwd": "${workspaceFolder}/RefApp\\Network"
             },
             "windows": {
                 "options": {
@@ -163,7 +163,7 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-                "cwd": "${workspaceFolder}/uv2csolution"
+                "cwd": "${workspaceFolder}/RefApp\\Network"
             },
             "windows": {
                 "options": {
