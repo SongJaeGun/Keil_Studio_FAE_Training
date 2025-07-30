@@ -5,8 +5,8 @@
             "name": "STLink@pyOCD (launch)",
             "type": "gdbtarget",
             "request": "launch",
-            "cwd": "${workspaceFolder}/uv2csolution",
-            "program": "out/wizard/Target_1/wizard.axf",
+            "cwd": "${workspaceFolder}/RefApp\\Network",
+            "program": "out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.axf",
             "gdb": "arm-none-eabi-gdb",
             "preLaunchTask": "CMSIS Load",
             "initCommands": [
@@ -40,8 +40,8 @@
             "name": "STLink@pyOCD (attach)",
             "type": "gdbtarget",
             "request": "attach",
-            "cwd": "${workspaceFolder}/uv2csolution",
-            "program": "out/wizard/Target_1/wizard.axf",
+            "cwd": "${workspaceFolder}/RefApp\\Network",
+            "program": "out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.axf",
             "gdb": "arm-none-eabi-gdb",
             "initCommands": [
                 ""

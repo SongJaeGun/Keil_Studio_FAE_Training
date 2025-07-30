@@ -18,11 +18,11 @@ solution:
         - Board-Layer: $SolutionDir()$/Board/NUCLEO-F756ZG/Board.clayer.yml
           copied-from: ${CMSIS_PACK_ROOT}/Keil/NUCLEO-F756ZG_BSP/2.0.0/Layers/Default/Board.clayer.yml
       target-set:
-        - set: 
+        - set:
           debugger:
             name: ST-LINK
           images:
-            - project-context: HTTP_Server.Debug    
+            - project-context: HTTP_Server.Debug
     # - type: <target_name>
     #   board: <board_name>
     #   variables:
@@ -35,7 +35,7 @@ solution:
     - type: Release
       debug: off
       optimize: balanced
-  
+
   misc:
     - for-compiler: AC6
       C-CPP:

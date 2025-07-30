@@ -1,5 +1,5 @@
 cbuild-run:
-  generated-by: csolution version 2.9.0
+  generated-by: csolution version 2.10.0
   solution: Network.csolution.yml
   target-type: STM32F756ZGTx
   target-set: <default>
