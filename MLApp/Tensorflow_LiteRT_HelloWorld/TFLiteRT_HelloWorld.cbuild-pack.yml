@@ -1,0 +1,50 @@
+cbuild-pack:
+  resolved-packs:
+    - resolved-pack: ARM::CMSIS@6.2.0
+      selected-by-pack:
+        - ARM::CMSIS
+        - ARM::CMSIS@6.2.0
+        - ARM::CMSIS@>=6.0.0
+    - resolved-pack: ARM::CMSIS-Compiler@0.0.0
+    - resolved-pack: ARM::CMSIS-Compiler@2.1.0
+      selected-by-pack:
+        - ARM::CMSIS-Compiler@>=2.0.0
+        - ARM::CMSIS-Compiler@>=2.1.0
+    - resolved-pack: ARM::CMSIS-DSP@0.0.0
+    - resolved-pack: ARM::CMSIS-DSP@1.16.2
+      selected-by-pack:
+        - ARM::CMSIS-DSP@1.16.2
+    - resolved-pack: ARM::CMSIS-Driver@2.10.0
+      selected-by-pack:
+        - ARM::CMSIS-Driver@>=2.8.0-0
+    - resolved-pack: ARM::CMSIS-Driver@2.11.0-dev
+    - resolved-pack: ARM::CMSIS-Driver_STM32@1.2.0
+      selected-by-pack:
+        - ARM::CMSIS-Driver_STM32@>=1.0.0-0
+    - resolved-pack: ARM::CMSIS-NN@0.0.0
+    - resolved-pack: ARM::CMSIS-NN@7.0.0
+      selected-by-pack:
+        - ARM::CMSIS-NN@7.0.0
+    - resolved-pack: Keil::NUCLEO-F756ZG_BSP@2.0.0
+      selected-by-pack:
+        - Keil::NUCLEO-F756ZG_BSP
+        - Keil::NUCLEO-F756ZG_BSP@>=2.0.0-0
+    - resolved-pack: Keil::STM32F7xx_DFP@3.1.0
+      selected-by-pack:
+        - Keil::STM32F7xx_DFP
+        - Keil::STM32F7xx_DFP@>=3.0.0-0
+    - resolved-pack: tensorflow::flatbuffers@1.25.2
+      selected-by-pack:
+        - tensorflow::flatbuffers
+    - resolved-pack: tensorflow::gemmlowp@1.25.2
+      selected-by-pack:
+        - tensorflow::gemmlowp
+    - resolved-pack: tensorflow::kissfft@1.25.2
+      selected-by-pack:
+        - tensorflow::kissfft
+    - resolved-pack: tensorflow::ruy@1.25.2
+      selected-by-pack:
+        - tensorflow::ruy
+    - resolved-pack: tensorflow::tensorflow-lite-micro@1.25.2
+      selected-by-pack:
+        - tensorflow::tensorflow-lite-micro

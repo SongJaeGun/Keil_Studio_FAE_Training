@@ -1,0 +1,52 @@
+solution:
+  description: TFLiteRT examples
+  created-for: CMSIS-Toolbox@2.7.0
+  cdefault:
+
+  select-compiler:
+    # list of tested compilers that can be selected
+    - compiler: AC6
+    - compiler: GCC
+    - compiler: CLANG
+
+  misc:
+    - for-compiler: AC6
+      C-CPP:
+        - -gdwarf-5
+      ASM:
+        - -gdwarf-5
+      Link:
+        - --entry=Reset_Handler
+
+  target-types:
+    - type: STM32F756ZGTx
+      device: STM32F756ZGTx
+      board: NUCLEO-F756ZG:Rev.B
+      target-set:
+        - set:
+          images:
+            - project-context: TFLiteRT_HelloWorld.Debug
+          debugger:
+            name: ST-Link@pyOCD
+            port: 3333
+            protocol: swd
+            clock: 10000000
+      variables:
+        - Board-Layer: $SolutionDir()$/Board/NUCLEO-F756ZG/Board.clayer.yml
+          copied-from: ${CMSIS_PACK_ROOT}/Keil/NUCLEO-F756ZG_BSP/2.0.0/Layers/Default/Board.clayer.yml
+
+  build-types:
+    - type: Debug
+      debug: on
+      optimize: debug
+    - type: Release
+      debug: off
+      optimize: balanced
+
+  projects:
+    - project: TFLiteRT_HelloWorld.cproject.yml
+  packs:
+    - pack: Keil::NUCLEO-F756ZG_BSP
+    - pack: Keil::STM32F7xx_DFP
+    - pack: ARM::CMSIS
+  compiler: AC6

@@ -1,0 +1,60 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "STLink@pyOCD (launch)",
+            "type": "gdbtarget",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/",
+            "program": "out/TFLiteRT_HelloWorld/STM32F756ZGTx/Debug/TFLiteRT_HelloWorld.axf",
+            "gdb": "arm-none-eabi-gdb",
+            "preLaunchTask": "CMSIS Load",
+            "initCommands": [
+                "monitor reset halt",
+                "tbreak main"
+            ],
+            "customResetCommands": [
+                "monitor reset halt"
+            ],
+            "target": {
+                "server": "pyocd",
+                "serverParameters": [
+                    "gdbserver",
+                    "--port",
+                    "3333",
+                    "--probe",
+                    "stlink:",
+                    "--connect",
+                    "attach",
+                    "--cbuild-run",
+                    "${command:cmsis-csolution.getCbuildRunFile}"
+                ],
+                "port": "3333"
+            },
+            "cmsis": {
+                "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
+                "updateConfiguration": "auto"
+            }
+        },
+        {
+            "name": "STLink@pyOCD (attach)",
+            "type": "gdbtarget",
+            "request": "attach",
+            "cwd": "${workspaceFolder}/",
+            "program": "out/TFLiteRT_HelloWorld/STM32F756ZGTx/Debug/TFLiteRT_HelloWorld.axf",
+            "gdb": "arm-none-eabi-gdb",
+            "initCommands": [
+                ""
+            ],
+            "customResetCommands": [
+                "monitor reset halt"
+            ],
+            "target": {
+                "port": "3333"
+            },
+            "cmsis": {
+                "updateConfiguration": "auto"
+            }
+        }
+    ]
+}

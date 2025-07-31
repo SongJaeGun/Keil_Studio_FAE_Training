@@ -1,0 +1,26 @@
+build-idx:
+  generated-by: csolution version 2.10.0
+  description: TFLiteRT examples
+  cdefault: cdefault.yml
+  csolution: TFLiteRT_HelloWorld.csolution.yml
+  tmpdir: tmp
+  cprojects:
+    - cproject: TFLiteRT_HelloWorld.cproject.yml
+      clayers:
+        - clayer: $Board-Layer$
+        - clayer: Model/model.clayer.yml
+  cbuilds:
+    - cbuild: TFLiteRT_HelloWorld.Debug+STM32F756ZGTx.cbuild.yml
+      project: TFLiteRT_HelloWorld
+      configuration: .Debug+STM32F756ZGTx
+      clayers:
+        - clayer: Board/NUCLEO-F756ZG/Board.clayer.yml
+        - clayer: Board/NUCLEO-F756ZG/CubeMX/Board.cgen.yml
+        - clayer: Model/model.clayer.yml
+      messages:
+        warnings:
+          - "context 'TFLiteRT_HelloWorld.Debug+STM32F756ZGTx': pack 'ARM::CMSIS-NN@7.0.0:7.99.99' required by pack 'tensorflow::tensorflow-lite-micro@1.25.2' is not specified"
+        info:
+          - TFLiteRT_HelloWorld.cbuild-pack.yml - file is already up-to-date
+          - TFLiteRT_HelloWorld+STM32F756ZGTx.cbuild-run.yml - file generated successfully
+          - TFLiteRT_HelloWorld.Debug+STM32F756ZGTx.cbuild.yml - file is already up-to-date
