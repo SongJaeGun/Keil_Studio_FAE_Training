@@ -5,8 +5,8 @@
             "name": "STLink@pyOCD (launch)",
             "type": "gdbtarget",
             "request": "launch",
-            "cwd": "${workspaceFolder}/RefApp\\Network",
-            "program": "out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.axf",
+            "cwd": "${workspaceFolder}/Blinky",
+            "program": "out\\Blinky\\NUCLEO-F756ZG\\Debug\\Blinky.axf",
             "gdb": "arm-none-eabi-gdb",
             "preLaunchTask": "CMSIS Load",
             "initCommands": [
@@ -14,20 +14,23 @@
                 "tbreak main"
             ],
             "customResetCommands": [
-                "monitor reset halt"
+                "monitor reset halt",
+                "tbreak main",
+                "continue"
             ],
             "target": {
                 "server": "pyocd",
                 "serverParameters": [
                     "gdbserver",
-                    "--port",
-                    "3333",
                     "--probe",
                     "stlink:",
                     "--connect",
                     "attach",
                     "--cbuild-run",
-                    "${command:cmsis-csolution.getCbuildRunFile}"
+                    "${command:cmsis-csolution.getCbuildRunFile}",
+                    "--quiet",
+                    "--log",
+                    "*.cbuild_run,*server=info"
                 ],
                 "port": "3333"
             },
@@ -40,19 +43,22 @@
             "name": "STLink@pyOCD (attach)",
             "type": "gdbtarget",
             "request": "attach",
-            "cwd": "${workspaceFolder}/RefApp\\Network",
-            "program": "out/HTTP_Server/STM32F756ZGTx/Debug/HTTP_Server.axf",
+            "cwd": "${workspaceFolder}/Blinky",
+            "program": "out\\Blinky\\NUCLEO-F756ZG\\Debug\\Blinky.axf",
             "gdb": "arm-none-eabi-gdb",
             "initCommands": [
                 ""
             ],
             "customResetCommands": [
-                "monitor reset halt"
+                "monitor reset halt",
+                "tbreak main",
+                "continue"
             ],
             "target": {
                 "port": "3333"
             },
             "cmsis": {
+                "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
                 "updateConfiguration": "auto"
             }
         }
