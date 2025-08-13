@@ -42,3 +42,4 @@ project:
     - elf
     - hex
     - map
+    - bin
